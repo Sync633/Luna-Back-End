@@ -1,0 +1,26 @@
+{
+  "name": "luna2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anacardozo/Luna2.git"
+  },
+  "author": "Miguel Santos Pereira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anacardozo/Luna2/issues"
+  },
+  "homepage": "https://github.com/anacardozo/Luna2#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  },
+  "type": "module"
+}

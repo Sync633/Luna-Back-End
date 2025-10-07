@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=MuseoModerno:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+        <button class="botao-menu">
+            <ion-icon name="menu-outline"></ion-icon>
+        </button>
+
+    <nav class="menu-lateral">
+
+        <ul>
+            <li>
+                <a href="/home">
+                    <ion-icon name="home"></ion-icon> 
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="/home/cadastro-professores">
+                    <ion-icon name="person"></ion-icon>
+                     Professores
+                </a>
+            </li>
+            <li>
+                <a href="/home/cadastro-alunos">
+                    <ion-icon name="school"></ion-icon> 
+                    Alunos
+                </a>
+            </li>
+            <li>
+                <a href="/home/cadastro-turmas">
+                    <ion-icon name="book"></ion-icon> 
+                    Turmas
+                </a>
+            </li>
+            <li>
+                <a href="/home/editar">
+                    <ion-icon name="pencil"></ion-icon> 
+                    Editar Dados
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="nav-pesquisa">
+            <div class="grupo-pesquisa">
+            <div class="inputs-pesquisa">
+                <ion-icon name="search"></ion-icon>
+                <input type="search" placeholder="Pesquisar">
+                
+            </div>
+
+            <button class="filtro">
+                <ion-icon name="filter"></ion-icon>
+                Filtrar
+            </button>
+
+            </div>
+
+            <div class="grupo-itens-escola">
+                <div class="icones">
+                    <ion-icon name="notifications"></ion-icon>
+                    <ion-icon name="cog"></ion-icon>
+                </div>
+
+                <p class="nome-escola">Olá, <%= nome %> </p>
+
+                <div class="img-escola">
+                    <img src="../assets/Fachada-Escola.jpg" alt="">
+                </div>
+            </div>
+        </nav>
+
+        <!-- Pastas - atalho -->
+
+        <div class="pastas">
+            <ion-icon name="folder" class="profs"></ion-icon>
+            <ion-icon name="folder" class="profs"></ion-icon>
+            <ion-icon name="folder" class="profs"></ion-icon>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

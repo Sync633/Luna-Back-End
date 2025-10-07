@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=MuseoModerno:ital,wght@0,100;1,100&display=swap"
+        rel="stylesheet">
+    <title>Cadastro - LUNA</title>
+</head>
+
+<body>
+    <!-- Logo -->
+    <header>
+        <nav>
+            <ul>
+                <li class="luna">luna</li>
+            </ul>
+        </nav>
+
+        <div>
+            <svg width="46" height="27" viewBox="0 0 46 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M19.8726 1C21.064 3.05404 23.447 7.33818 23.447 8.04243C24.3406 5.98838 26.3066 1.70424 27.0215 1"
+                    stroke="#FFDDD2" stroke-width="0.5" />
+                <path
+                    d="M21.6596 14.5554C19.2766 10.7408 12.0085 3.46361 2 4.87209C4.68085 7.21971 9.14894 12.7952 8.25532 17.1968C7.65957 19.8377 7.3617 25.9998 13.617 25.9998C15.4043 25.9998 19.0979 25.1195 20.766 21.5983C22.8511 17.1968 28.5106 10.1546 30.5957 8.39372C32.6809 6.63284 38.2809 3.46328 44 4.87209C41.9149 6.63258 37.9234 11.562 38.6383 17.196C38.9362 20.1303 38.1021 25.999 32.383 25.999C30.5957 25.999 26.6638 24.9427 25.234 20.7172"
+                    stroke="#FFDDD2" />
+            </svg>
+        </div>
+
+    </header>
+    <!-- Tela Cadastro -->
+    <main>
+        <img src="/assets/bg-login.jpg"
+            alt="imagem vetorizada totalmente branca com ondas em toda sua lateral direita" class="img-bg">
+
+        <div class="principal">
+            <!-- Formulário Cadastro -->
+            <h1 class="text-login">CADASTRO</h1>
+            <form class="form-cadastro" action="/cadastro" method="post">
+                <!-- DADOS DO CADASTRO -->
+                <div class="grupos-container">
+                    <div class="grupo-esquerdo1">
+                        <div class="box">
+                            <label>NOME DA INSTITUIÇÃO</label>
+                            <input type="text" placeholder="Nome" name="nome">
+                            <ion-icon name="create" class="icone"></ion-icon>
+                        </div>
+                        <div class="box">
+                            <label>CNPJ</label>
+                            <input type="text" placeholder="CNPJ" name="cnpj">
+                            <ion-icon name="create" class="icone"></ion-icon>
+                        </div>
+                        <div class="box">
+                            <label>E-MAIL</label>
+                            <input type="text" placeholder="E-mail" name="email">
+                            <ion-icon name="create" class="icone"></ion-icon>
+                        </div>
+                        <div class="box">
+                            <label>BAIRRO</label>
+                            <input type="text" placeholder="Bairro" name="bairro">
+                            <ion-icon name="create" class="icone"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="grupo-direita1">
+                        <div class="box">
+                            <label>TELEFONE</label>
+                            <input type="text" placeholder="Telefone" name="telefone">
+                            <ion-icon name="create" class="icone"></ion-icon>
+                        </div>
+                        <div class="box">
+                            <label>CIDADE</label>
+                            <input type="text" placeholder="Cidade" name="cidade">
+                            <ion-icon name="create" class="icone"></ion-icon>
+                        </div>
+                        <div class="box">
+                            <label>RUA</label>
+                            <input type="text" placeholder="Rua" name="rua">
+                            <ion-icon name="create" class="icone"></ion-icon>
+                        </div>
+                        <div class="box">
+                            <label>SENHA</label>
+                            <input type="password" placeholder="Senha" name="senha">
+                            <ion-icon name="create" class="icone"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <!-- Botão de Cadastrar -->
+                <div class="box-cadastrar">
+                    <button type="submit" class="btn-cadastrar">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="/js/cadastro.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

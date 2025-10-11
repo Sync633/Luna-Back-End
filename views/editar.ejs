@@ -62,28 +62,28 @@
         <div class="alterar-dados-escola">
             <h1>EDITAR DADOS</h1>
 
-            <form class="alterar-escola">
+            <form class="alterar-escola" action="/editar/update" method="POST">
                 <div class="grupos-container">
                     <div class="grupo-esquerdo2">
                         <!-- Dados para alterar da escola -->
                         <div class="box2">
                             <label for="NomeInstituicao">NOME DA INSTITUIÇÃO</label>
-                            <input type="text" placeholder="Nome" class="nomeInstuicao">
+                            <input type="text" name="nome" placeholder="Nome" class="nomeInstuicao" value="<%= escolas.nome %>">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="CNPJ">CNPJ</label>
-                            <input type="text" placeholder="CNPJ" class="cnpj">
+                            <input type="text" name="cnpj" placeholder="CNPJ" class="cnpj" value="<%= escolas.cnpj %>">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="E-mail">E-MAIL</label>
-                            <input type="text" placeholder="E-mail" class="emailInstuicao">
+                            <input type="text" name="email" placeholder="E-mail" class="emailInstuicao" value="<%= escolas.email %>">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="Bairro">BAIRRO</label>
-                            <input type="text" placeholder="Bairro" class="bairroInstituicao">
+                            <input type="text" name="bairro" placeholder="Bairro" class="bairroInstituicao" value="<%= escolas.bairro %>">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                     </div>
@@ -91,22 +91,22 @@
                     <div class="grupo-direita2">
                         <div class="box2">
                             <label for="Telefone">TELEFONE</label>
-                            <input type="text" placeholder="Telefone" class="telefoneInstituicao">
+                            <input type="text" name="telefone" placeholder="Telefone" class="telefoneInstituicao" value="<%= escolas.telefone %>">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="Cidade">CIDADE</label>
-                            <input type="text" placeholder="Cidade" class="cidadeInstituicao">
+                            <input type="text" name="cidade" placeholder="Cidade" class="cidadeInstituicao" value="<%= escolas.cidade %>">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="Rua">RUA</label>
-                            <input type="text" placeholder="Rua" class="ruaInstituicao">
+                            <input type="text" name="rua" placeholder="Rua" class="ruaInstituicao" value="<%= escolas.rua %>">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="Senha">SENHA</label>
-                            <input type="password" placeholder="Senha" class="senhaInstituicao">
+                            <input type="password" name="senha" placeholder="Senha" class="senhaInstituicao" value="<%= escolas.senha %>">
                             <ion-icon name="eye-off" class="icone"></ion-icon>
                         </div>
                     </div>
@@ -140,27 +140,27 @@
                 <div class="dados-escola">
                     <div class="box3">
                         <label for="NomeInstituicao">NOME DA INSTITUIÇÃO</label>
-                        <p class="nomeInstuicao">EMEI</p>
+                        <p class="nomeInstuicao"><%= escolas.nome %></p>
                     </div>
                     <div class="box3">
                         <label for="cnpj">CNPJ</label>
-                        <p class="cnpj">11.392.956/0001-34</p>
+                        <p class="cnpj"><%= escolas.cnpj %></p>
                     </div>
                     <div class="box3">
                         <label for="NomeInstituicao">E-MAIL</label>
-                        <p class="emailInstuicao">gaspar@gmail.com</p>
+                        <p class="emailInstuicao"><%= escolas.email %></p>
                     </div>
                     <div class="box3">
                         <label for="telefoneInstituicao">TELEFONE</label>
-                        <p class="telefoneInstituicao">(13) 98125-6453</p>
+                        <p class="telefoneInstituicao"><%= escolas.telefone %></p>
                     </div>
                     <div class="box3">
                         <label for="cidadeInstituicao">CIDADE</label>
-                        <p class="cidadeInstuicao">Jacupiranga-SP</p>
+                        <p class="cidadeInstuicao"><%= escolas.cidade %></p>
                     </div>
                     <div class="box3">
                         <label for="ruaInstituicao">RUA</label>
-                        <p class="ruaInstuicao">Expedicionários</p>
+                        <p class="ruaInstuicao"><%= escolas.rua %></p>
                     </div>
                 </div>
             </div>

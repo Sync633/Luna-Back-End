@@ -1,31 +1,42 @@
 import express from "express";
-
-// Importando o BD temporário
-import { usuarios } from "./CadastroController.js";
+import {usuarios, escolas} from "../model/association.js";
 
 const router = express.Router();
 
 // Rota GET para a "Raiz" para o Login
 router.get("/", (req, res) => {
-    res.render("index")
+  res.render("index");
 });
 
 // Rota POST para realizar o login do Usuário
-router.post('/login', (req, res) => {
-    const { email, senha } = req.body;
+router.post("/login", async (req, res) => {
+  const { email, senha } = req.body;
 
-    const usuarioNoBanco = usuarios.find(u => u.email === email);
+  const usuarioNoBanco = await usuarios.findOne({
+    where: { email },
+    include: [
+      {
+        model: escolas,
+        as: "escolas",
+      },
+    ],
+  });
 
-    if (!usuarioNoBanco) {
-        return res.redirect('/?erro=usuario_nao_encontrado');
-    }
+  if (!usuarioNoBanco) {
+    return res.redirect("/?erro=usuario_nao_encontrado");
+  }
 
-    if (senha !== usuarioNoBanco.senha) {
-        return res.redirect('/?erro=senha_errada');
-    }
-    
-    // Redireciona passando o nome pelo link **(Temporário)**
-    res.redirect(`/home?nome=${usuarioNoBanco.nome}`);
+  if (senha !== usuarioNoBanco.senha) {
+    return res.redirect("/?erro=senha_errada");
+  }
+
+  req.session.usuarioNoBanco = {
+    codUsuario: usuarioNoBanco.codUsuario,
+    nome: usuarioNoBanco.nome,
+    email: usuarioNoBanco.email,
+  };
+
+  res.redirect("/home");
 });
 
 export default router;

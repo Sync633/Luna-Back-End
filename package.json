@@ -20,7 +20,10 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "nodemon": "^3.1.10"
+    "express-session": "^1.18.2",
+    "mysql2": "^3.15.1",
+    "nodemon": "^3.1.10",
+    "sequelize": "^6.37.7"
   },
   "type": "module"
 }

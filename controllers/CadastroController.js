@@ -1,48 +1,43 @@
 import express from "express";
+import {usuarios, escolas} from "../model/association.js";
 
 const router = express.Router();
 
-// BD **(Temporário)**
-const usuarios = [
-    {
-        nome: 'Escola de Teste',
-        cnpj: '12.345.678/0001-90',
-        email: 'admin@email.com',
-        bairro: 'Centro',
-        telefone: '11987654321',
-        cidade: 'Sao Paulo',
-        rua: 'Rua Principal',
-        senha: '123456'
-    }
-];
-
 // Rota GET para renderizar a página de cadastro
 router.get('/cadastro', (req, res) => {
-    res.render("cadastro")
+     res.render("cadastro")
 });
 
-// Rota POST para processar o formulário de cadastro
-router.post('/cadastro', (req, res) => {
-    // Recebendo os dados do formulário
-    const { nome, cnpj, email, bairro, telefone, cidade, rua, senha } = req.body;
+router.post("/cadastro", async (req, res) => {
+  try {
+    const { email, senha, nome, cnpj, rua, bairro, cidade, telefone } = req.body;
 
-    // Verificação de Email
-    const usuarioExistente = usuarios.find(u => u.email === email);
-    if (usuarioExistente) {
-        return res.redirect('/cadastro?erro=email_ja_cadastrado');
-    }
+    // Cria o usuário
+    const novoUsuario = await usuarios.create({
+      email,
+      senha
+    });
 
-    // Criar o objeto do com os dados do Novo Usuário
-    const novoUsuario = { nome, cnpj, email, bairro, telefone, cidade, rua, senha};
+    // Cria a instituição vinculada ao usuário
+    const novaInstituicao = await escolas.create({
+      nome,
+      email,
+      cnpj,
+      rua,
+      bairro,
+      cidade,
+      telefone,
+      codUsuario: novoUsuario.codUsuario
+    });
 
-    // Adicionar o usuário ao Banco de Dados temporário
-    usuarios.push(novoUsuario);
-    // Mostra os dados no novo usuário e o numero de usuários cadastrados
-    console.log('Novo utilizador cadastrado:', novoUsuario);
-    console.log('Total de utilizadores no banco de dados:', usuarios);
+    console.log("Usuário criado:", novoUsuario.codUsuario);
 
-    res.redirect('/?sucesso=cadastro_realizado');
+    // Redireciona com sucesso
+    res.redirect("/?sucesso=cadastro_realizado");
+  } catch (error) {
+    console.error(error);
+    res.redirect("/?erro=erro_ao_cadastrar");
+  }
 });
 
 export default router;
-export { usuarios };

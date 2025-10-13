@@ -94,7 +94,21 @@
             <img src="../assets/fundo-cadPro.png" alt="">
 
             <ul class="list-pro">
+                <% professores.forEach(professor => { %>
                 <li class="dados-pro">
+                    <div class="dados1">
+                        <div class="img-prof"><img src="../assets/img-pro.jpeg" alt="" class="img-prof"></div>
+                        <p class="nome-prof"><%= professor.nome %> <%= professor.sobrenome %></p>
+                    </div>
+                    <div class="dados2">
+                        <p class="cpf"><%= professor.cpf %></p>
+                        <a href="/home/cadastro-professores/delete/<%= professor.codProfessor %>" onclick="return confirm('Deseja realmente excluir o Professor <%=professor.nome%>?')">
+                            <ion-icon name="trash"></ion-icon>
+                        </a>
+                    </div>
+                </li>
+                <% }) %>
+                <!-- <li class="dados-pro">
                     <div class="dados1">
                         <div class="img-prof"><img src="../assets/img-pro.jpeg" alt="" class="img-prof"></div>
                         <p class="nome-prof">Aline Barros</p>
@@ -153,17 +167,7 @@
                         <p class="cpf">CPF: 645.347.653-76</p>
                         <ion-icon name="trash"></ion-icon>
                     </div>
-                </li>
-                <li class="dados-pro">
-                    <div class="dados1">
-                        <div class="img-prof"><img src="../assets/img-pro.jpeg" alt="" class="img-prof"></div>
-                        <p class="nome-prof">Aline Barros</p>
-                    </div>
-                    <div class="dados2">
-                        <p class="cpf">CPF: 645.347.653-76</p>
-                        <ion-icon name="trash"></ion-icon>
-                    </div>
-                </li>
+                </li> -->
             </ul>
         </div>
 
@@ -171,33 +175,33 @@
         <div class="professores">
             <h1>CADASTRO PROFESSORES</h1>
 
-            <form class="cadastro-professores">
+            <form class="cadastro-professores" action="/home/cadastro-professores" method="POST">
                 <div class="grupos-container">
                     <div class="grupo-esquerdo">
                         <!-- Dados do cadastro dos professores -->
                         <div class="box2">
                             <label for="nomeProfessor">NOME</label>
-                            <input type="text" placeholder="Nome" class="nomeProfessor">
+                            <input type="text" placeholder="Nome" class="nomeProfessor" name="nome" required>
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="cpfprofessor">CPF</label>
-                            <input type="text" placeholder="CPF" class="cpfProfessor">
+                            <input type="text" placeholder="CPF" class="cpfProfessor" name="cpf">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="rgprofessor">RG</label>
-                            <input type="text" placeholder="RG" class="rgProfessor">
+                            <input type="text" placeholder="RG" class="rgProfessor" name="rg">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="telefoneProfessor">TELEFONE</label>
-                            <input type="text" placeholder="Telefone" class="telefoneProfessor">
+                            <input type="text" placeholder="Telefone" class="telefoneProfessor" name="telefone">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="disciplinasProfessor">DISCIPLINAS</label>
-                            <input type="text" placeholder="Disciplinas" class="disciplinasProfessor">
+                            <input type="text" placeholder="Disciplinas" class="disciplinasProfessor" name="disciplinas">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                     </div>
@@ -205,27 +209,27 @@
                     <div class="grupo-direita">
                         <div class="box2">
                             <label for="sobrenomeProfessor">SOBRENOME</label>
-                            <input type="text" placeholder="Sobrenome" class="sobrenomeProfessor">
+                            <input type="text" placeholder="Sobrenome" class="sobrenomeProfessor" name="sobrenome" required>
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="dataNacimentoProfessor">DATA DE NASCIMENTO</label>
-                            <input type="text" placeholder="Data de nascimento" class="dtanascimentoProfessor">
+                            <input type="text" placeholder="Data de nascimento" class="dtanascimentoProfessor" name="dataNasc">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="cidadeProfessor">CIDADE</label>
-                            <input type="text" placeholder="Cidade" class="cidadeProfessor">
+                            <input type="text" placeholder="Cidade" class="cidadeProfessor" name="cidade">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="emailProfessor">E-MAIL</label>
-                            <input type="text" placeholder="E-mail" class="emailProfessor">
+                            <input type="text" placeholder="E-mail" class="emailProfessor" name="email" required>
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="senhaProfessor">SENHA</label>
-                            <input type="password" placeholder="Senha" class="senhaProfessor">
+                            <input type="password" placeholder="Senha" class="senhaProfessor" name="senha" required>
                             <ion-icon name="eye-off" class="icone"></ion-icon>
                         </div>
                     </div>
@@ -242,7 +246,7 @@
                 </div>
 
                 <div class="salvar">
-                    <button class="btn-salvar-pro">Salvar</button>
+                    <button type="submit" class="btn-salvar-pro">Salvar</button>
                 </div>
             </form>
         </div>

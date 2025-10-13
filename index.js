@@ -10,7 +10,10 @@ import session from "express-session";
 app.use(session({
   secret: "segredo123",
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
+  cookie: {
+   maxAge: 60 * 60 * 1000 // Tempo Máximo de 1HR
+  }
 }));
 
 

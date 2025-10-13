@@ -1,11 +1,12 @@
 import express from "express";
 import {usuarios, escolas} from "../model/association.js";
+// import bcrypt from "bcryptjs"; ## HASH de SENHAS ##
 
 const router = express.Router();
 
 // Rota GET para renderizar a página de cadastro
 router.get('/cadastro', (req, res) => {
-     res.render("cadastro")
+  res.render("cadastro")
 });
 
 router.post("/cadastro", async (req, res) => {

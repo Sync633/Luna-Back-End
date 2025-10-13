@@ -30,11 +30,20 @@ router.post("/login", async (req, res) => {
     return res.redirect("/?erro=senha_errada");
   }
 
-  req.session.usuarioNoBanco = {
-    codUsuario: usuarioNoBanco.codUsuario,
-    nome: usuarioNoBanco.nome,
-    email: usuarioNoBanco.email,
+  req.session.usuarioLogado = {
+        codUsuario: usuarioNoBanco.codUsuario,
+        codEscola: usuarioNoBanco.escolas.codEscola,
+        nome: usuarioNoBanco.escolas.nome,
+        email: usuarioNoBanco.email,
+        cnpj: usuarioNoBanco.escolas.cnpj,
+        rua: usuarioNoBanco.escolas.rua,
+        bairro: usuarioNoBanco.escolas.bairro,
+        cidade: usuarioNoBanco.escolas.cidade,
+        telefone: usuarioNoBanco.escolas.telefone,
+        senha: usuarioNoBanco.senha
   };
+
+  console.log('Dados da sessão após o login:', req.session.usuarioLogado);
 
   res.redirect("/home");
 });

@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/editar', async (req, res) => {
   try {
-    const usuario = req.session.usuarioNoBanco;
+    const usuario = req.session.usuarioLogado;
 
     if (!usuario) {
       return res.redirect('/login');
@@ -32,7 +32,7 @@ router.get('/editar', async (req, res) => {
 
 router.post('/editar/update', async (req, res) => {
   try {
-    const usuario = req.session.usuarioNoBanco;
+    const usuario = req.session.usuarioLogado;
 
     if (!usuario) {
       return res.redirect('/login');

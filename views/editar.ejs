@@ -62,7 +62,7 @@
         <div class="alterar-dados-escola">
             <h1>EDITAR DADOS</h1>
 
-            <form class="alterar-escola" action="/editar/update" method="POST">
+            <form class="alterar-escola" action="/home/editar/update" method="POST" >
                 <div class="grupos-container">
                     <div class="grupo-esquerdo2">
                         <!-- Dados para alterar da escola -->
@@ -161,6 +161,10 @@
                     <div class="box3">
                         <label for="ruaInstituicao">RUA</label>
                         <p class="ruaInstuicao"><%= escolas.rua %></p>
+                    </div>
+                    <div class="box3">
+                        <label for="bairroInstituicao">Bairro</label>
+                        <p class="bairroInstuicao"><%= escolas.bairro %></p>
                     </div>
                 </div>
             </div>

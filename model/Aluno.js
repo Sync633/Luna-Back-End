@@ -1,10 +1,10 @@
 import Sequelize from "sequelize";
 import connection from "../config/sequelize-config.js";
 
-const Professor = connection.define(
-  "professores",
+const Aluno = connection.define(
+  "alunos",
   {
-    codProfessor: {
+    codAluno: {
       type: Sequelize.INTEGER,
       primaryKey: true,
       autoIncrement: true,
@@ -18,6 +18,10 @@ const Professor = connection.define(
       type: Sequelize.STRING,
       allowNull: false,
     },
+    serie: {
+      type: Sequelize.STRING,
+      allowNull: false,
+    },
     cpf: {
       type: Sequelize.STRING,
       allowNull: false,
@@ -26,39 +30,45 @@ const Professor = connection.define(
       type: Sequelize.DATE,
       allowNull: false,
     },
-    rg: {
-      type: Sequelize.STRING,
+    codTurma: { 
+      type: Sequelize.INTEGER,
+      allowNull: true,
+    },
+    codEscola: { 
+      type: Sequelize.INTEGER,
       allowNull: false,
     },
-    telefone: {
-      type: Sequelize.STRING,
+    ra: {
+      type: Sequelize.INTEGER,
       allowNull: false,
     },
     email: {
       type: Sequelize.STRING,
       allowNull: false,
     },
-    disciplinas: {
+    escola: {
       type: Sequelize.STRING,
       allowNull: false,
     },
-    senha: {
+    codUsuario: {
       type: Sequelize.STRING,
       allowNull: false,
-    },
-    urlFotoProfessor: {
+      defaultValue: "default_user" 
+    },   
+    urlFotoLaudo: {
       type: Sequelize.STRING,
-      allowNull: false,
+      allowNull: true,
     },
-    codEscola: { 
-      type: Sequelize.INTEGER,
-      allowNull: false,
-    },
+    urlFotoRosto: {
+      type: Sequelize.STRING,
+      allowNull: true,
+    } 
   },
   {
     timestamps: false,
   }
 );
-Professor.sync({ force: false });
 
-export default Professor;
+Aluno.sync({ force: false });
+
+export default Aluno;

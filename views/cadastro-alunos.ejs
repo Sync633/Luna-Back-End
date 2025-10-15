@@ -93,90 +93,22 @@
             <img src="/assets/fundo-cadAluno.png" alt="">
 
             <ul class="list-aluno">
+                <% alunos.forEach(aluno => { %>
                 <li class="dados-aluno">
                     <div class="dados3">
                         <div class="img-aluno">
-                            <img src="../assets/img-aluno.jpg" alt="" class="img-aluno">
+                         <img src="<%= aluno.urlFotoRosto %>" alt="">
                         </div>
-                        <p class="nome-aluno">Isabelly Santos</p>
+                        <p class="nome-aluno"><%= aluno.nome %> <%= aluno.sobrenome %></p>
                     </div>
                     <div class="dados4">
-                        <p class="ra">RA: 847256731</p>
+                        <p class="ra">RA: <%= aluno.ra %></p>
+                        <a href="/home/cadastro-alunos/delete/<%= aluno.codAluno %>" onclick="return confirm('Deseja realmente excluir o Aluno <%=aluno.nome%>?')">
                         <ion-icon name="trash"></ion-icon>
+                        </a>
                     </div>
                 </li>
-                <li class="dados-aluno">
-                    <div class="dados3">
-                        <div class="img-aluno">
-                            <img src="/assets/img-aluno.jpg" alt="" class="img-aluno">
-                        </div>
-                        <p class="nome-aluno">Isabelly Santos</p>
-                    </div>
-                    <div class="dados4">
-                        <p class="ra">RA: 847256731</p>
-                        <ion-icon name="trash"></ion-icon>
-                    </div>
-                </li>
-                <li class="dados-aluno">
-                    <div class="dados3">
-                        <div class="img-aluno">
-                            <img src="../assets/img-aluno.jpg" alt="" class="img-aluno">
-                        </div>
-                        <p class="nome-aluno">Isabelly Santos</p>
-                    </div>
-                    <div class="dados4">
-                        <p class="ra">RA: 847256731</p>
-                        <ion-icon name="trash"></ion-icon>
-                    </div>
-                </li>
-                <li class="dados-aluno">
-                    <div class="dados3">
-                        <div class="img-aluno">
-                            <img src="../assets/img-aluno.jpg" alt="" class="img-aluno">
-                        </div>
-                        <p class="nome-aluno">Isabelly Santos</p>
-                    </div>
-                    <div class="dados4">
-                        <p class="ra">RA: 847256731</p>
-                        <ion-icon name="trash"></ion-icon>
-                    </div>
-                </li>
-                <li class="dados-aluno">
-                    <div class="dados3">
-                        <div class="img-aluno">
-                            <img src="../assets/img-aluno.jpg" alt="" class="img-aluno">
-                        </div>
-                        <p class="nome-aluno">Isabelly Santos</p>
-                    </div>
-                    <div class="dados4">
-                        <p class="ra">RA: 847256731</p>
-                        <ion-icon name="trash"></ion-icon>
-                    </div>
-                </li>
-                <li class="dados-aluno">
-                    <div class="dados3">
-                        <div class="img-aluno">
-                            <img src="../assets/img-aluno.jpg" alt="" class="img-aluno">
-                        </div>
-                        <p class="nome-aluno">Isabelly Santos</p>
-                    </div>
-                    <div class="dados4">
-                        <p class="ra">RA: 847256731</p>
-                        <ion-icon name="trash"></ion-icon>
-                    </div>
-                </li>
-                <li class="dados-aluno">
-                    <div class="dados3">
-                        <div class="img-aluno">
-                            <img src="../assets/img-aluno.jpg" alt="" class="img-aluno">
-                        </div>
-                        <p class="nome-aluno">Isabelly Santos</p>
-                    </div>
-                    <div class="dados4">
-                        <p class="ra">RA: 847256731</p>
-                        <ion-icon name="trash"></ion-icon>
-                    </div>
-                </li>
+                <% }) %>
             </ul>
         </div>
         <!-- Lista de Alunos Cadastrados -->
@@ -185,36 +117,36 @@
         <div class="alunos">
             <h1>CADASTRO ALUNO</h1>
 
-            <form class="cadastro-alunos">
+            <form class="cadastro-alunos" action="/home/cadastro-alunos" method="POST"  enctype="multipart/form-data">
                 <div class="grupos-container">
                     <div class="grupo-esquerdo3">
                         <!-- Dados do cadastro dos alunos -->
                         <div class="box4">
                             <label for="NomeAluno">NOME</label>
-                            <input type="text" placeholder="Nome" class="nomeAluno">
+                            <input type="text" placeholder="Nome" class="nomeAluno" name="nome">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box4">
                             <label for="cpfAluno">CPF</label>
-                            <input type="text" placeholder="CPF" class="cpfAluno">
+                            <input type="text" placeholder="CPF" class="cpfAluno" name="cpf">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box4">
                             <label for="serie">SÉRIE</label>
-                            <input type="text" placeholder="Série" class="serie">
+                            <input type="text" placeholder="Série" class="serie" name="serie">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box4">
                             <label for="ra">RA</label>
-                            <input type="text" placeholder="Indique o RA da criança" class="ra">
+                            <input type="text" placeholder="Indique o RA da criança" class="ra" name="ra">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <p>LAUDO DE TDAH DA CRIANÇA</p>
                         <div class="btn-imagem">
-                            <label class="btn-camera" for="input-file">
+                            <label class="btn-camera" for="input-file-laudo">
                                 <ion-icon name="image"></ion-icon>
                             </label>
-                            <input type="file" id="input-file" name="imagem" accept="image/*" class="img-laudo"
+                            <input type="file" id="input-file-laudo" name="urlFotoLaudo" accept="image/*" class="img-laudo"
                                 style="display: none;">
                         </div>
                     </div>
@@ -222,30 +154,30 @@
                     <div class="grupo-direita3">
                         <div class="box4">
                             <label for="sobrenomeAluno">SOBRENOME</label>
-                            <input type="text" placeholder="Sobrenome" class="sobrenomeAluno">
+                            <input type="text" placeholder="Sobrenome" class="sobrenomeAluno" name="sobrenome">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box4">
                             <label for="idade">IDADE</label>
-                            <input type="text" placeholder="Data de nascimento" class="idade">
+                            <input type="text" placeholder="Data de nascimento" class="idade" name="dataNasc">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box4">
                             <label for="escola">ESCOLA</label>
-                            <input type="text" placeholder="Escola" class="escola">
+                            <input type="text" placeholder="Escola" class="escola" name="escola">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box4">
                             <label for="emailAluno">E-MAIL</label>
-                            <input type="text" placeholder="E-mail" class="emailAluno">
+                            <input type="text" placeholder="E-mail" class="emailAluno" name="email">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <p>IMAGEM DO ROSTO DA CRIANÇA</p>
                         <div class="btn-imagem">
-                            <label class="btn-camera" for="input-file">
+                            <label class="btn-camera" for="input-file-rosto">
                                 <ion-icon name="image"></ion-icon>
                             </label>
-                            <input type="file" id="input-file" name="imagem" accept="image/*" class="img-rosto-crianca"
+                            <input type="file" id="input-file-rosto" name="urlFotoRosto" accept="image/*" class="img-rosto-crianca"
                                 style="display: none;">
                         </div>
                     </div>

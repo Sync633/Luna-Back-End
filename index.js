@@ -6,6 +6,9 @@ const app = express();
 import connection from "./config/sequelize-config.js";
 import session from "express-session";
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 // Sessão
 app.use(session({
   secret: "segredo123",

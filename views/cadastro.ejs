@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&a…
         rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=MuseoModerno:ital,wght@0,100;1,100&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=…
         rel="stylesheet">
     <title>Cadastro - LUNA</title>
 </head>
-
+ 
 <body>
     <!-- Logo -->
     <header>
@@ -24,7 +24,7 @@
                 <li class="luna">luna</li>
             </ul>
         </nav>
-
+ 
         <div>
             <svg width="46" height="27" viewBox="0 0 46 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -35,17 +35,17 @@
                     stroke="#FFDDD2" />
             </svg>
         </div>
-
+ 
     </header>
     <!-- Tela Cadastro -->
     <main>
         <img src="/assets/bg-login.jpg"
             alt="imagem vetorizada totalmente branca com ondas em toda sua lateral direita" class="img-bg">
-
+ 
         <div class="principal">
             <!-- Formulário Cadastro -->
             <h1 class="text-login">CADASTRO</h1>
-            <form class="form-cadastro" action="/cadastro" method="post">
+            <form class="form-cadastro" action="/cadastro" method="post" enctype="multipart/form-data">
                 <!-- DADOS DO CADASTRO -->
                 <div class="grupos-container">
                     <div class="grupo-esquerdo1">
@@ -70,7 +70,7 @@
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                     </div>
-
+ 
                     <div class="grupo-direita1">
                         <div class="box">
                             <label>TELEFONE</label>
@@ -94,6 +94,13 @@
                         </div>
                     </div>
                 </div>
+                <!-- Botão de Upload de Imagem -->
+                <div class="btn-imagem1">
+                    <label class="btn-camera1" for="input-file">
+                        <ion-icon name="image"></ion-icon>
+                    </label>
+                    <input type="file" id="input-file" name="foto" accept="image/*" class="img-rosto-docente"style="display: none;">
+                </div>
                 <!-- Botão de Cadastrar -->
                 <div class="box-cadastrar">
                     <button type="submit" class="btn-cadastrar">Cadastrar</button>
@@ -105,5 +112,5 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
-
+ 
 </html>

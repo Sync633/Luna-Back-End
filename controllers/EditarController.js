@@ -8,27 +8,27 @@ router.get('/editar', async (req, res) => {
   console.log('Session usuario:', req.session.usuarioLogado);
   
   try {
-    const usuario = req.session.usuarioLogado;
+    const escola = req.session.usuarioLogado;
 
-    if (!usuario) {
+    if (!escola) {
       console.log('Usuário não logado, redirecionando para login');
       return res.redirect('/');
     }
 
     // Buscar escola pelo codUsuario
-    const escola = await escolas.findOne({
-      where: { codUsuario: usuario.codUsuario },
-    });
+    // const escola = await escolas.findOne({
+    //   where: { codUsuario: usuario.codUsuario },
+    // });
 
-    if (!escola) {
-      console.log('Escola não encontrada para usuário:', usuario.codUsuario);
-      return res.redirect('/?erro=escola_nao_encontrada');
-    }
+    // if (!escola) {
+    //   console.log('Escola não encontrada para usuário:', usuario.codUsuario);
+    //   return res.redirect('/?erro=escola_nao_encontrada');
+    // }
 
     console.log('Renderizando página editar com escola:', escola.nome);
     res.render('editar', {
-      usuario: usuario,
-      escolas: escola,
+      // usuario: usuario,
+      escola: escola,
     });
   } catch (error) {
     console.error('Erro na rota /editar:', error);
@@ -57,7 +57,8 @@ router.post('/editar/update', async (req, res) => {
       telefone: telefone,
       bairro: bairro,
       cidade: cidade,
-      rua: rua
+      rua: rua,
+      senha: senha,
     };
 
     // Se senha foi fornecida e não está vazia
@@ -84,6 +85,19 @@ router.post('/editar/update', async (req, res) => {
       console.log('Nenhum dado foi atualizado');
       res.redirect('/home/editar?erro=nenhum_dado_alterado');
     }
+      req.session.usuarioLogado = {
+        codUsuario: usuarioNoBanco.codUsuario,
+        codEscola: usuarioNoBanco.escolas.codEscola,
+        nome: usuarioNoBanco.escolas.nome,
+        email: usuarioNoBanco.email,
+        cnpj: usuarioNoBanco.escolas.cnpj,
+        rua: usuarioNoBanco.escolas.rua,
+        bairro: usuarioNoBanco.escolas.bairro,
+        cidade: usuarioNoBanco.escolas.cidade,
+        telefone: usuarioNoBanco.escolas.telefone,
+        urlFotoEscola: usuarioNoBanco.escolas.urlFotoEscola,
+        senha: usuarioNoBanco.senha,
+  };
 
   } catch (error) {
     console.error('Erro na atualização:', error);
@@ -92,5 +106,8 @@ router.post('/editar/update', async (req, res) => {
 });
 
 export default router;
+
+
+
 
 

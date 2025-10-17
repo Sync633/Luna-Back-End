@@ -40,7 +40,8 @@ router.post("/login", async (req, res) => {
         bairro: usuarioNoBanco.escolas.bairro,
         cidade: usuarioNoBanco.escolas.cidade,
         telefone: usuarioNoBanco.escolas.telefone,
-        senha: usuarioNoBanco.senha
+        urlFotoEscola: usuarioNoBanco.escolas.urlFotoEscola,
+        senha: usuarioNoBanco.senha,
   };
 
   console.log('Dados da sessão após o login:', req.session.usuarioLogado);

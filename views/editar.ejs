@@ -68,22 +68,22 @@
                         <!-- Dados para alterar da escola -->
                         <div class="box2">
                             <label for="NomeInstituicao">NOME DA INSTITUIÇÃO</label>
-                            <input type="text" name="nome" placeholder="Nome" class="nomeInstuicao" value="<%= escolas.nome %>">
+                            <input type="text" name="nome" placeholder="Nome" class="nomeInstuicao" value="<%= escola.nome %>">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="CNPJ">CNPJ</label>
-                            <input type="text" name="cnpj" placeholder="CNPJ" class="cnpj" value="<%= escolas.cnpj %>">
+                            <input type="text" name="cnpj" placeholder="CNPJ" class="cnpj" value="<%= escola.cnpj %>">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="E-mail">E-MAIL</label>
-                            <input type="text" name="email" placeholder="E-mail" class="emailInstuicao" value="<%= escolas.email %>">
+                            <input type="text" name="email" placeholder="E-mail" class="emailInstuicao" value="<%= escola.email %>">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="Bairro">BAIRRO</label>
-                            <input type="text" name="bairro" placeholder="Bairro" class="bairroInstituicao" value="<%= escolas.bairro %>">
+                            <input type="text" name="bairro" placeholder="Bairro" class="bairroInstituicao" value="<%= escola.bairro %>">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                     </div>
@@ -91,22 +91,22 @@
                     <div class="grupo-direita2">
                         <div class="box2">
                             <label for="Telefone">TELEFONE</label>
-                            <input type="text" name="telefone" placeholder="Telefone" class="telefoneInstituicao" value="<%= escolas.telefone %>">
+                            <input type="text" name="telefone" placeholder="Telefone" class="telefoneInstituicao" value="<%= escola.telefone %>">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="Cidade">CIDADE</label>
-                            <input type="text" name="cidade" placeholder="Cidade" class="cidadeInstituicao" value="<%= escolas.cidade %>">
+                            <input type="text" name="cidade" placeholder="Cidade" class="cidadeInstituicao" value="<%= escola.cidade %>">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="Rua">RUA</label>
-                            <input type="text" name="rua" placeholder="Rua" class="ruaInstituicao" value="<%= escolas.rua %>">
+                            <input type="text" name="rua" placeholder="Rua" class="ruaInstituicao" value="<%= escola.rua %>">
                             <ion-icon name="create" class="icone"></ion-icon>
                         </div>
                         <div class="box2">
                             <label for="Senha">SENHA</label>
-                            <input type="password" name="senha" placeholder="Senha" class="senhaInstituicao" value="<%= escolas.senha %>">
+                            <input type="password" name="senha" placeholder="Senha" class="senhaInstituicao" value="<%= escola.senha %>">
                             <ion-icon name="eye-off" class="icone"></ion-icon>
                         </div>
                     </div>
@@ -132,7 +132,7 @@
 
             <!-- Imagem da escola -->
             <div class="img-escola-dados">
-                <img src="../assets/Fachada-Escola.jpg" alt="">
+                <img src="<%= escola.urlFotoEscola %>" alt="">
             </div>
 
             <!-- Apresentação dos Dados -->
@@ -140,31 +140,31 @@
                 <div class="dados-escola">
                     <div class="box3">
                         <label for="NomeInstituicao">NOME DA INSTITUIÇÃO</label>
-                        <p class="nomeInstuicao"><%= escolas.nome %></p>
+                        <p class="nomeInstuicao"><%= escola.nome %></p>
                     </div>
                     <div class="box3">
                         <label for="cnpj">CNPJ</label>
-                        <p class="cnpj"><%= escolas.cnpj %></p>
+                        <p class="cnpj"><%= escola.cnpj %></p>
                     </div>
                     <div class="box3">
                         <label for="NomeInstituicao">E-MAIL</label>
-                        <p class="emailInstuicao"><%= escolas.email %></p>
+                        <p class="emailInstuicao"><%= escola.email %></p>
                     </div>
                     <div class="box3">
                         <label for="telefoneInstituicao">TELEFONE</label>
-                        <p class="telefoneInstituicao"><%= escolas.telefone %></p>
+                        <p class="telefoneInstituicao"><%= escola.telefone %></p>
                     </div>
                     <div class="box3">
                         <label for="cidadeInstituicao">CIDADE</label>
-                        <p class="cidadeInstuicao"><%= escolas.cidade %></p>
+                        <p class="cidadeInstuicao"><%= escola.cidade %></p>
                     </div>
                     <div class="box3">
                         <label for="ruaInstituicao">RUA</label>
-                        <p class="ruaInstuicao"><%= escolas.rua %></p>
+                        <p class="ruaInstuicao"><%= escola.rua %></p>
                     </div>
                     <div class="box3">
                         <label for="bairroInstituicao">Bairro</label>
-                        <p class="bairroInstuicao"><%= escolas.bairro %></p>
+                        <p class="bairroInstuicao"><%= escola.bairro %></p>
                     </div>
                 </div>
             </div>

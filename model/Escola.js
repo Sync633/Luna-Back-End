@@ -38,6 +38,10 @@ const escolas = connection.define(
       type: Sequelize.STRING,
       allowNull: false,
     },
+    urlFotoEscola: {
+      type: Sequelize.STRING,
+      allowNull: false,
+    },
     codUsuario: { 
       type: Sequelize.INTEGER,
       allowNull: false,

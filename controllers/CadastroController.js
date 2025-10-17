@@ -28,7 +28,7 @@ router.get('/cadastro', (req, res) => {
   res.render("cadastro");
 });
  
-router.post("/cadastro", upload.single("foto"), async (req, res) => {
+router.post("/cadastro", upload.single("urlFotoEscola"), async (req, res) => {
     try {
         const { email, senha, nome, cnpj, rua, bairro, cidade, telefone } = req.body;
        

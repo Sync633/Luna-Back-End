@@ -221,15 +221,15 @@
         <div class="turma">
             <h1>CRIAR TURMA</h1>
 
-            <form action="" class="cadastro-turma">
+            <form action="/home/cadastro-turmas" class="cadastro-turma" method="POST">
                 <div class="box5">
                     <label for="turma">TURMA</label>
-                    <input type="text" placeholder="Digite o nome da turma" class="nomeTurma">
+                    <input type="text" placeholder="Digite o nome da turma" class="nomeTurma" name="nome">
                     <ion-icon name="create" class="icone"></ion-icon>
                 </div>
                 <div class="box5">
                     <label for="emailProf">PROFESSOR</label>
-                    <input type="text" placeholder="Digite o e-mail do proefessor" class="emailProfessor">
+                    <input type="text" placeholder="Digite o e-mail do proefessor" class="emailProfessor" name="professor">
                     <ion-icon name="create" class="icone"></ion-icon>
                 </div>
             </form>

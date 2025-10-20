@@ -35,9 +35,13 @@ router.get('/cadastro-turmas', async (req, res) => {
             where: { codEscola : codEscola}
         });
 
-        if (!codTurmaSelecionada) {
-            // Se nenhuma turma estiver selecionada, deixa a primeira turma de escola como padrão
-            codTurmaSelecionada = turmas[0].codTurma;
+        if (turmas.length === 0) {
+            codTurmaSelecionada = null;
+        } else {
+            if (!codTurmaSelecionada) {
+                // Se nenhuma turma estiver selecionada seleciona a primeira turma
+                codTurmaSelecionada = turmas[0].codTurma;
+            }
         }
         // Caso haja uma turma selecionada passa os dados dela
         if (codTurmaSelecionada) {

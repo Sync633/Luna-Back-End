@@ -61,7 +61,7 @@ router.post("/cadastro-alunos", upload.fields([
 ]), async (req, res) => {
     try {
         // Pega os dados do formulário de CADASTRO-ALUNOS
-        const { nome, sobrenome, telefone, cpf, dataNasc, ra, email, escola } = req.body;
+        const { nome, sobrenome, telefone, cpf, dataNasc, ra, email, nomeResponsavel } = req.body;
         // Acessa os arquivos a partir de req.files e armazena suas informações
         const fotoRosto = req.files['urlFotoRosto'];
         const fotoLaudo = req.files['urlFotoLaudo'];
@@ -84,7 +84,7 @@ router.post("/cadastro-alunos", upload.fields([
             dataNasc: dataNascTratada,
             ra,
             email,
-            escola,
+            nomeResponsavel,
             urlFotoLaudo,
             urlFotoRosto,
             codEscola: codEscola

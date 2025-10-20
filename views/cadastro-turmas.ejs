@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +8,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&a…
         rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=MuseoModerno:ital,wght@0,100;1,100&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=MuseoModerno:ital,wght@0,100;1,100&display=swap%22
         rel="stylesheet">
     <title>Home</title>
 </head>
-
+ 
 <body>
     <button class="botao-menu">
         <ion-icon name="menu-outline"></ion-icon>
     </button>
-
+ 
     <nav class="menu-lateral">
-
+ 
         <ul>
             <li>
                 <a href="/home">
-                    <ion-icon name="home"></ion-icon> 
+                    <ion-icon name="home"></ion-icon>
                     Home
                 </a>
             </li>
@@ -38,25 +38,25 @@
             </li>
             <li>
                 <a href="/home/cadastro-alunos">
-                    <ion-icon name="school"></ion-icon> 
+                    <ion-icon name="school"></ion-icon>
                     Alunos
                 </a>
             </li>
             <li>
                 <a href="/home/cadastro-turmas">
-                    <ion-icon name="book"></ion-icon> 
+                    <ion-icon name="book"></ion-icon>
                     Turmas
                 </a>
             </li>
             <li>
                 <a href="/home/editar">
-                    <ion-icon name="pencil"></ion-icon> 
+                    <ion-icon name="pencil"></ion-icon>
                     Editar Dados
                 </a>
             </li>
         </ul>
     </nav>
-
+ 
     <div class="content">
         <!-- Inicio Nav Pesquisa -->
         <nav class="nav-pesquisa">
@@ -64,18 +64,18 @@
                 <div class="inputs-pesquisa">
                     <ion-icon name="search"></ion-icon>
                     <input type="search" placeholder="Pesquisar">
-
+ 
                 </div>
-
+ 
                 <button class="filtro">
                     <ion-icon name="filter"></ion-icon>
                     Filtrar
                 </button>
-
+ 
             </div>
-
+ 
             <div>
-
+ 
                 <div class="svg">
                     <svg width="46" height="27" viewBox="0 0 66 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -85,14 +85,14 @@
                             d="M31.0213 21.0624C27.5035 15.4167 16.7745 4.64649 2 6.73105C5.95745 10.2055 12.5532 18.4573 11.234 24.9715C10.3546 28.8801 9.91489 38 19.1489 38C21.7872 38 27.2397 36.6972 29.7021 31.4858C32.7801 24.9715 41.1348 14.5492 44.2128 11.9431C47.2908 9.33695 55.5574 4.64601 64 6.73105C60.922 9.33658 55.0298 16.6322 56.0851 24.9704C56.5248 29.3132 55.2936 37.9989 46.8511 37.9989C44.2128 37.9989 38.4085 36.4355 36.2979 30.1818"
                             stroke="#005A63" />
                     </svg>
-
+ 
                 </div>
         </nav>
         <!-- Fim da Nav Pesquisa -->
-
+ 
         <div class="lista-turma">
             <h3>TURMAS</h3>
-
+ 
             <div class="salas">
                 <% turmas.forEach(turma => { %>
                     <a href="/home/cadastro-turmas?turma=<%= turma.codTurma %>">
@@ -121,44 +121,53 @@
                     <ion-icon name="trash"></ion-icon>
                 </div> -->
             </div>
-
+ 
             <h3>ALUNOS</h3>
             <!-- Nome Professor Responsável -->
             <label for="nome-profResponsavel" class="profResponsavel">
+                <% if (turmaSelecionada) { %>
                 <div class="nomeProf">
                     <div class="img-prof"><img src="<%= turmaSelecionada.professor.urlFotoProfessor %>" alt="" class="img-prof"></div>
                     <p class="nome-prof">Prof.ª <%= turmaSelecionada.professor.nome %> <%=turmaSelecionada.professor.sobrenome %></p>
                 </div>
                 <p class="nome-turma"><%= turmaSelecionada.nome %></p>
+                <% } %>
             </label>
-
+ 
             <!-- Alunos da Turma -->
             <ul class="lista-alunosTurma">
-                <% turmaSelecionada.alunos.forEach(aluno => { %>
-                <li class="dados-alunoTurma">
-                    <div class="dados3">
-                        <div class="img-aluno">
-                            <img src="<%= aluno.urlFotoRosto %>" alt="" class="img-aluno">
+                <% if (turmaSelecionada && turmaSelecionada.alunos) { %>
+                    <% turmaSelecionada.alunos.forEach(aluno => { %>
+                    <li class="dados-alunoTurma">
+                        <div class="dados3">
+                            <div class="img-aluno">
+                                <img src="<%= aluno.urlFotoRosto %>" alt="" class="img-aluno">
+                            </div>
+                            <p class="nome-aluno"><%= aluno.nome %> <%= aluno.sobrenome %></p>
                         </div>
-                        <p class="nome-aluno"><%= aluno.nome %> <%= aluno.sobrenome %></p>
-                    </div>
-                    <div class="dados4">
-                        <p class="ra"><%= aluno.ra %></p>
-                        <a href="/home/cadastro-turmas/delete-aluno/<%= aluno.codAluno %>/<%= aluno.codTurma %>" onclick="return confirm('Deseja realmente remover o aluno <%= aluno.nome%> da turma <%= turmaSelecionada.nome %>?')">
-                            <ion-icon name="trash"></ion-icon>
-                        </a>
-                    </div>
-                </li>
-                <% }) %>
+                        <div class="dados4">
+                            <p class="ra"><%= aluno.ra %></p>
+                            <a href="/home/cadastro-turmas/delete-aluno/<%= aluno.codAluno %>/<%= aluno.codTurma %>" onclick="return confirm('Deseja realmente remover o aluno <%= aluno.nome%> da turma <%= turmaSelecionada.nome %>?')">
+                                <ion-icon name="trash"></ion-icon>
+                            </a>
+                        </div>
+                    </li>
+                    <% }) %>
+                    <% if (turmaSelecionada.alunos.length === 0) { %>
+                        <li class="dados-alunoTurma"><p>Esta turma não possui alunos cadastrados.</p></li>
+                    <% } %>
+                <% } else { %>
+                    <li class="dados-alunoTurma"><p>Selecione ou crie uma turma para ver a lista de alunos.</p></li>
+                <% } %>
             </ul>
-
+ 
             <img src="/assets/avatar.png" alt="" class="avatar">
         </div>
-
+ 
         <!-- CADASTRO TURMA -->
         <div class="turma">
             <h1>CRIAR TURMA</h1>
-
+ 
             <form action="/home/cadastro-turmas" id="cadastro-turma" class="cadastro-turma" method="POST">
                 <div class="box5">
                     <label for="turma">TURMA</label>
@@ -178,7 +187,7 @@
                 <ion-icon name="create" class="icone"></ion-icon>
                 </div>
             </form>
-
+ 
             <div class="adicionar">
                 <div class="pesquisar">
                     <ion-icon name="search"></ion-icon>
@@ -205,12 +214,12 @@
                 <button class="criar" type="submit" form="cadastro-turma">Criar</button>
             </div>
         </div>
-
+ 
     </div>
-
+ 
     <script src="/js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
-
+ 
 </html>

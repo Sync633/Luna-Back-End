@@ -38,7 +38,7 @@ const Aluno = connection.define(
       type: Sequelize.STRING,
       allowNull: false,
     },
-    escola: {
+    nomeResponsavel: {
       type: Sequelize.STRING,
       allowNull: false,
     },

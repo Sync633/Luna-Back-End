@@ -18,7 +18,7 @@ const Aluno = connection.define(
       type: Sequelize.STRING,
       allowNull: false,
     },
-    serie: {
+    telefone: {
       type: Sequelize.STRING,
       allowNull: false,
     },
@@ -28,14 +28,6 @@ const Aluno = connection.define(
     },
     dataNasc: {
       type: Sequelize.DATE,
-      allowNull: false,
-    },
-    codTurma: { 
-      type: Sequelize.INTEGER,
-      allowNull: true,
-    },
-    codEscola: { 
-      type: Sequelize.INTEGER,
       allowNull: false,
     },
     ra: {
@@ -50,11 +42,6 @@ const Aluno = connection.define(
       type: Sequelize.STRING,
       allowNull: false,
     },
-    codUsuario: {
-      type: Sequelize.STRING,
-      allowNull: false,
-      defaultValue: "default_user" 
-    },   
     urlFotoLaudo: {
       type: Sequelize.STRING,
       allowNull: true,
@@ -62,7 +49,15 @@ const Aluno = connection.define(
     urlFotoRosto: {
       type: Sequelize.STRING,
       allowNull: true,
-    } 
+    },
+    codTurma: { 
+      type: Sequelize.INTEGER,
+      allowNull: true,
+    },
+    codEscola: { 
+      type: Sequelize.INTEGER,
+      allowNull: false,
+    }
   },
   {
     timestamps: false,

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -94,11 +94,17 @@
             <h3>TURMAS</h3>
 
             <div class="salas">
-                <div class="pasta-turma">
-                    <p class="nome-turma">1°A</p>
-                    <ion-icon name="trash"></ion-icon>
-                </div>
-                <div class="pasta-turma">
+                <% turmas.forEach(turma => { %>
+                    <a href="/home/cadastro-turmas?turma=<%= turma.codTurma %>">
+                        <div class="pasta-turma">
+                            <p class="nome-turma"><%= turma.nome %></p>
+                            <a href="/home/cadastro-turmas/delete-turma/<%= turma.codTurma %>" onclick="return confirm('Deseja realmente excluir a turma <%= turma.nome %>?')">
+                                <ion-icon name="trash"></ion-icon>
+                            </a>
+                        </div>
+                    </a>
+                <% }) %>
+                <!-- <div class="pasta-turma">
                     <p class="nome-turma">2°A</p>
                     <ion-icon name="trash"></ion-icon>
                 </div>
@@ -113,124 +119,63 @@
                 <div class="pasta-turma">
                     <p class="nome-turma">5°A</p>
                     <ion-icon name="trash"></ion-icon>
-                </div>
+                </div> -->
             </div>
 
             <h3>ALUNOS</h3>
             <!-- Nome Professor Responsável -->
             <label for="nome-profResponsavel" class="profResponsavel">
                 <div class="nomeProf">
-                    <div class="img-prof"><img src="../assets/img-pro.jpeg" alt="" class="img-prof"></div>
-                    <p class="nome-prof">Prof.ª Helena Agular</p>
+                    <div class="img-prof"><img src="<%= turmaSelecionada.professor.urlFotoProfessor %>" alt="" class="img-prof"></div>
+                    <p class="nome-prof">Prof.ª <%= turmaSelecionada.professor.nome %> <%=turmaSelecionada.professor.sobrenome %></p>
                 </div>
-                <p class="nome-turma">1°A</p>
+                <p class="nome-turma"><%= turmaSelecionada.nome %></p>
             </label>
 
             <!-- Alunos da Turma -->
             <ul class="lista-alunosTurma">
+                <% turmaSelecionada.alunos.forEach(aluno => { %>
                 <li class="dados-alunoTurma">
                     <div class="dados3">
                         <div class="img-aluno">
-                            <img src="../assets/img-aluno.jpg" alt="" class="img-aluno">
+                            <img src="<%= aluno.urlFotoRosto %>" alt="" class="img-aluno">
                         </div>
-                        <p class="nome-aluno">Isabelly Santos</p>
+                        <p class="nome-aluno"><%= aluno.nome %> <%= aluno.sobrenome %></p>
                     </div>
                     <div class="dados4">
-                        <p class="ra">RA: 847256731</p>
-                        <ion-icon name="trash"></ion-icon>
+                        <p class="ra"><%= aluno.ra %></p>
+                        <a href="/home/cadastro-turmas/delete-aluno/<%= aluno.codAluno %>/<%= aluno.codTurma %>" onclick="return confirm('Deseja realmente remover o aluno <%= aluno.nome%> da turma <%= turmaSelecionada.nome %>?')">
+                            <ion-icon name="trash"></ion-icon>
+                        </a>
                     </div>
                 </li>
-                <li class="dados-alunoTurma">
-                    <div class="dados3">
-                        <div class="img-aluno">
-                            <img src="../assets/img-aluno.jpg" alt="" class="img-aluno">
-                        </div>
-                        <p class="nome-aluno">Isabelly Santos</p>
-                    </div>
-                    <div class="dados4">
-                        <p class="ra">RA: 847256731</p>
-                        <ion-icon name="trash"></ion-icon>
-                    </div>
-                </li>
-                <li class="dados-alunoTurma">
-                    <div class="dados3">
-                        <div class="img-aluno">
-                            <img src="../assets/img-aluno.jpg" alt="" class="img-aluno">
-                        </div>
-                        <p class="nome-aluno">Isabelly Santos</p>
-                    </div>
-                    <div class="dados4">
-                        <p class="ra">RA: 847256731</p>
-                        <ion-icon name="trash"></ion-icon>
-                    </div>
-                </li>
-                <li class="dados-alunoTurma">
-                    <div class="dados3">
-                        <div class="img-aluno">
-                            <img src="../assets/img-aluno.jpg" alt="" class="img-aluno">
-                        </div>
-                        <p class="nome-aluno">Isabelly Santos</p>
-                    </div>
-                    <div class="dados4">
-                        <p class="ra">RA: 847256731</p>
-                        <ion-icon name="trash"></ion-icon>
-                    </div>
-                </li>
-                <li class="dados-alunoTurma">
-                    <div class="dados3">
-                        <div class="img-aluno">
-                            <img src="../assets/img-aluno.jpg" alt="" class="img-aluno">
-                        </div>
-                        <p class="nome-aluno">Isabelly Santos</p>
-                    </div>
-                    <div class="dados4">
-                        <p class="ra">RA: 847256731</p>
-                        <ion-icon name="trash"></ion-icon>
-                    </div>
-                </li>
-                <li class="dados-alunoTurma">
-                    <div class="dados3">
-                        <div class="img-aluno">
-                            <img src="../assets/img-aluno.jpg" alt="" class="img-aluno">
-                        </div>
-                        <p class="nome-aluno">Isabelly Santos</p>
-                    </div>
-                    <div class="dados4">
-                        <p class="ra">RA: 847256731</p>
-                        <ion-icon name="trash"></ion-icon>
-                    </div>
-                </li>
-                <li class="dados-alunoTurma">
-                    <div class="dados3">
-                        <div class="img-aluno">
-                            <img src="../assets/img-aluno.jpg" alt="" class="img-aluno">
-                        </div>
-                        <p class="nome-aluno">Isabelly Santos</p>
-                    </div>
-                    <div class="dados4">
-                        <p class="ra">RA: 847256731</p>
-                        <ion-icon name="trash"></ion-icon>
-                    </div>
-                </li>
+                <% }) %>
             </ul>
 
-            <img src="../assets/avatar.png" alt="" class="avatar">
+            <img src="/assets/avatar.png" alt="" class="avatar">
         </div>
 
         <!-- CADASTRO TURMA -->
         <div class="turma">
             <h1>CRIAR TURMA</h1>
 
-            <form action="/home/cadastro-turmas" class="cadastro-turma" method="POST">
+            <form action="/home/cadastro-turmas" id="cadastro-turma" class="cadastro-turma" method="POST">
                 <div class="box5">
                     <label for="turma">TURMA</label>
-                    <input type="text" placeholder="Digite o nome da turma" class="nomeTurma" name="nome">
+                    <input type="text" placeholder="Digite o nome da turma" id="turma" class="nomeTurma" name="nome">
                     <ion-icon name="create" class="icone"></ion-icon>
                 </div>
-                <div class="box5">
-                    <label for="emailProf">PROFESSOR</label>
-                    <input type="text" placeholder="Digite o e-mail do proefessor" class="emailProfessor" name="professor">
-                    <ion-icon name="create" class="icone"></ion-icon>
+                <div class="box5 boxProf">
+                    <label for="professor">PROFESSOR</label>
+                    <select id="professor" placeholder="Digite o nome da turma" name="codProfessor" class="emailProfessor" required>
+                        <option class="selectProfessor" value="" disabled selected hidden>Selecione o Professor</option>
+                        <% professores.forEach(professor => { %>
+                        <option class="selectProfessor" value="<%= professor.codProfessor %>" >
+                            <%= professor.nome %> <%= professor.sobrenome %>
+                        </option>
+                        <% }) %>
+                </select>
+                <ion-icon name="create" class="icone"></ion-icon>
                 </div>
             </form>
 
@@ -240,37 +185,24 @@
                     <input type="search" placeholder="Digite o RA do aluno">
                 </div>
                 <ul class="lista-adicionar">
-
+                    <% alunos.forEach(aluno => { %>
                     <li class="dados-alunosAdicionar">
                         <div class="dados3">
                             <div class="img-aluno">
-                                <img src="../assets/img-aluno.jpg" alt="" class="img-aluno">
+                                <img src="<%= aluno.urlFotoRosto %>" alt="" class="img-aluno">
                             </div>
-                            <p class="nome-aluno">Isabelly Santos</p>
+                            <p class="nome-aluno"><%= aluno.nome %> <%= aluno.sobrenome %></p>
                         </div>
                         <div class="dados5">
-                            <p class="ra">RA: 847256731</p>
-                            <input type="checkbox" id="check1" name="aluno">
-                            <label for="check1" class="checkbox"></label>
+                            <p class="ra"><%= aluno.ra %></p>
+                            <input type="checkbox" id="check<%=aluno.codAluno%>" name="aluno" value="<%= aluno.codAluno %>" form="cadastro-turma">
+                            <label for="check<%=aluno.codAluno%>" class="checkbox"></label>
                         </div>
                     </li>
-                    <li class="dados-alunosAdicionar">
-                        <div class="dados3">
-                            <div class="img-aluno">
-                                <img src="../assets/img-aluno.jpg" alt="" class="img-aluno">
-                            </div>
-                            <p class="nome-aluno">Isabelly Santos</p>
-                        </div>
-                        <div class="dados5">
-                            <p class="ra">RA: 847256731</p>
-                            <input type="checkbox" id="check2" name="aluno">
-                            <label for="check2" class="checkbox"></label>
-                        </div>
-                    </li>
-                    
+                    <% }) %>
                 </ul>
                  
-                <button class="criar" type="submit">Criar</button>
+                <button class="criar" type="submit" form="cadastro-turma">Criar</button>
             </div>
         </div>
 

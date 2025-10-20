@@ -1,9 +1,9 @@
+// --- IMPORTS de Bibliotecas e Módulos do Projeto ---
 import express from "express";
 import multer from "multer";
 import {usuarios, escolas} from "../model/association.js";
 import { formatarData } from "../utils/formatarData.js";
 import { formatarNomeImg } from "../utils/formatarNomeImg.js";
- 
 const router = express.Router();
  
 // --- Configuração do Multer para Salvar A Imagem da Escola ---
@@ -57,7 +57,7 @@ router.post("/cadastro", upload.single("urlFotoEscola"), async (req, res) => {
         res.redirect("/?sucesso=cadastro_realizado");
     } catch (error) {
         console.error(error);
-        res.redirect("/?erro=erro_ao_cadastrar");
+        res.redirect("/cadastro?erro=erro_ao_cadastrar");
     }
 });
  

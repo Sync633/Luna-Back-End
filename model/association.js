@@ -1,6 +1,8 @@
 import usuarios from "./Usuario.js";
 import escolas from "./Escola.js";
 import Professor from "./Professor.js";
+import Turma from "./Turma.js";
+import Aluno from "./Aluno.js";
 
 // Associações de usuários e escolas
 usuarios.hasOne(escolas, {
@@ -22,4 +24,24 @@ Professor.belongsTo(escolas, {
   as: "escolas",
 });
 
-export { usuarios, escolas, Professor };
+// Associações de professores e turmas
+Professor.hasMany(Turma, {
+  foreignKey: 'codProfessor',
+  as: "turmas"
+});
+Turma.belongsTo(Professor, {
+  foreignKey: 'codProfessor',
+  as: "professor" 
+});
+
+// Associações de turmas e alunos
+Turma.hasMany(Aluno, {
+    foreignKey: 'codTurma',
+    as: "alunos"
+});
+Aluno.belongsTo(Turma, {
+    foreignKey: 'codTurma',
+    as: "turma"
+});
+
+export { usuarios, escolas, Professor, Turma };

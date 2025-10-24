@@ -1931,7 +1931,7 @@ input[type="checkbox"]:checked + .checkbox {
   display: flex;
   background-color: var(--text-color-secondary);
   width: 500px;
-  height: 400px;
+  height: 275px;
   margin: auto;
   border-radius: 10px;
   align-items: flex-start;
@@ -2022,7 +2022,7 @@ input[type="checkbox"]:checked + .checkbox {
       height: 100%;
       /* flex-direction: column; */
       /* min-height: 100%; */
-      margin: 30px 0;
+      margin: 15px 0;
       padding: 0;
 
   }
@@ -2198,7 +2198,7 @@ input[type="checkbox"]:checked + .checkbox {
   gap: 60px;
 }
 
-.opcao-excluir div{
+.opcao-excluir a{
   background-color: #005a63;
   height: 100%;
   width: 120px;
@@ -2715,4 +2715,16 @@ select:required:invalid {
 
 option {
   color: black; 
+}
+
+
+/* Links de acesso as ROTAS */
+.links-rotas{
+  text-decoration: none;
+}
+.links-rotas:hover,
+.links-rotas:focus,
+.links-rotas:visited {
+  text-decoration: none;
+  color: inherit;
 }

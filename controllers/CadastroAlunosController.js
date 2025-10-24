@@ -52,8 +52,6 @@ router.get('/cadastro-alunos', (req, res) => {
     });
 });
 
-
-
 // ----- ROTA para cadastro de novos alunos -----
 router.post("/cadastro-alunos", upload.fields([
     { name: 'urlFotoRosto', maxCount: 1 },

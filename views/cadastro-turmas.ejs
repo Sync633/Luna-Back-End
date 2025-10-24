@@ -22,7 +22,6 @@
     </button>
  
     <nav class="menu-lateral">
- 
         <ul>
             <li>
                 <a href="/home">
@@ -95,31 +94,15 @@
  
             <div class="salas">
                 <% turmas.forEach(turma => { %>
-                    <a href="/home/cadastro-turmas?turma=<%= turma.codTurma %>">
-                        <div class="pasta-turma">
+                    <div class="pasta-turma">
+                        <a href="/home/cadastro-turmas?turma=<%= turma.codTurma %>" class="links-rotas">
                             <p class="nome-turma"><%= turma.nome %></p>
-                            <a href="/home/cadastro-turmas/delete-turma/<%= turma.codTurma %>" onclick="return confirm('Deseja realmente excluir a turma <%= turma.nome %>?')">
-                                <ion-icon name="trash"></ion-icon>
-                            </a>
+                        </a>
+                        <a href="/home/cadastro-turmas/delete-turma/<%= turma.codTurma %>" onclick="return confirm('Deseja realmente excluir a turma <%= turma.nome %>?')" class="link-rotas">
+                            <ion-icon name="trash"></ion-icon>
+                        </a>
                         </div>
-                    </a>
                 <% }) %>
-                <!-- <div class="pasta-turma">
-                    <p class="nome-turma">2°A</p>
-                    <ion-icon name="trash"></ion-icon>
-                </div>
-                <div class="pasta-turma">
-                    <p class="nome-turma">3°A</p>
-                    <ion-icon name="trash"></ion-icon>
-                </div>
-                <div class="pasta-turma">
-                    <p class="nome-turma">4°A</p>
-                    <ion-icon name="trash"></ion-icon>
-                </div>
-                <div class="pasta-turma">
-                    <p class="nome-turma">5°A</p>
-                    <ion-icon name="trash"></ion-icon>
-                </div> -->
             </div>
  
             <h3>ALUNOS</h3>

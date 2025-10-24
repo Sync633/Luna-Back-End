@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=MuseoModerno:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=MuseoModerno:ital,wght@0,100;1,100&display=swap"
+        rel="stylesheet">
     <title>Home</title>
 </head>
+
 <body>
-        <button class="botao-menu">
-            <ion-icon name="menu-outline"></ion-icon>
-        </button>
+    <button class="botao-menu">
+        <ion-icon name="menu-outline"></ion-icon>
+    </button>
 
     <nav class="menu-lateral">
 
         <ul>
             <li>
                 <a href="/home">
-                    <ion-icon name="home"></ion-icon> 
+                    <ion-icon name="home"></ion-icon>
                     Home
                 </a>
             </li>
             <li>
                 <a href="/home/cadastro-professores">
                     <ion-icon name="person"></ion-icon>
-                     Professores
+                    Professores
                 </a>
             </li>
             <li>
                 <a href="/home/cadastro-alunos">
-                    <ion-icon name="school"></ion-icon> 
+                    <ion-icon name="school"></ion-icon>
                     Alunos
                 </a>
             </li>
             <li>
                 <a href="/home/cadastro-turmas">
-                    <ion-icon name="book"></ion-icon> 
+                    <ion-icon name="book"></ion-icon>
                     Turmas
                 </a>
             </li>
             <li>
                 <a href="/home/editar">
-                    <ion-icon name="pencil"></ion-icon> 
+                    <ion-icon name="pencil"></ion-icon>
                     Editar Dados
+                </a>
+            </li>
+
+            <li class="sair">
+                <a href="/">
+                    <ion-icon name="log-out"></ion-icon>
+                    Sair
                 </a>
             </li>
         </ul>
@@ -54,29 +67,28 @@
     <div class="content">
         <nav class="nav-pesquisa">
             <div class="grupo-pesquisa">
-            <div class="inputs-pesquisa">
-                <ion-icon name="search"></ion-icon>
-                <input type="search" placeholder="Pesquisar">
-                
-            </div>
+                <div class="inputs-pesquisa">
+                    <ion-icon name="search"></ion-icon>
+                    <input type="search" placeholder="Pesquisar">
 
-            <button class="filtro">
-                <ion-icon name="filter"></ion-icon>
-                Filtrar
-            </button>
+                </div>
+
+                <button class="filtro">
+                    <ion-icon name="filter"></ion-icon>
+                    Filtrar
+                </button>
 
             </div>
 
             <div class="grupo-itens-escola">
                 <div class="icones">
                     <ion-icon name="notifications"></ion-icon>
-                    <ion-icon name="cog"></ion-icon>
                 </div>
 
-                <p class="nome-escola">Olá, <%= escola.nome %> </p>
+                <p class="nome-escola">Olá, <%= escola.nome %></p>
 
                 <div class="img-escola">
-                     <img src="<%= escola.urlFotoEscola %>" alt="">
+                    <img src="<%= escola.urlFotoEscola %>" alt="">
                 </div>
             </div>
         </nav>
@@ -84,14 +96,113 @@
         <!-- Pastas - atalho -->
 
         <div class="pastas">
-            <ion-icon name="folder" class="profs"></ion-icon>
-            <ion-icon name="folder" class="profs"></ion-icon>
-            <ion-icon name="folder" class="profs"></ion-icon>
+            <a href="/home/cadastro-professores" class="pasta">
+                <ion-icon name="person"></ion-icon>
+                <p>PROFESSORES</p>
+            </a>
+
+            <a href="/home/cadastro-alunos" class="pasta">
+                <ion-icon name="school"></ion-icon>
+                <p>ALUNOS</p>
+            </a>
+
+            <a href="/home/cadastro-turmas" class="pasta">
+                <ion-icon name="book"></ion-icon>
+                <p>TURMAS</p>
+            </a>
         </div>
+
+        <div class="materias">
+
+            <div class="mat-1">
+                <div class="materia" onclick="ativarModal()">
+                <p>MATÉRIAS</p>
+            </div>
+
+            <div class="box-img">
+                <img src="/assets/rafiki.png" alt="">
+            </div> 
+            </div>
+
+             <div class="list-materias">
+                <% materias.forEach(materia => { %>
+                    <label for="materia">
+                        <%= materia.nome %>
+                        <ion-icon name="trash" onclick="ativarModalM(`<%= materia.codMateria %>`)"></ion-icon>
+                    </label>
+                <% }) %>
+            </div>
+
+        </div>
+
     </div>
+
+    <!-- CRIAR MATÉRIA -->
+
+    <div class="modal-materia">
+        <ion-icon class="fechar-modal" name="close-outline"></ion-icon>
+            <div class="modal-header">
+                <div class="logo-materia">
+                    <ion-icon name="library-outline"></ion-icon>
+                </div>
+                <p>CADASTRO MATÉRIA</p>
+            </div>
+
+            <div class="modal-body">
+                <form class="cadastro-materia" action="/home/cadastrar-materia" method="POST">
+                        <div class="box8">
+                            <label>NOME</label>
+                            <input type="text" placeholder="Nome" name="nome">
+                            <ion-icon name="create" class="icone"></ion-icon>
+                        </div>
+
+                        <div class="box-salvar2">
+                            <button type="submit" class="btn-salvar2">Salvar</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+
+    <div class="modal-shadown">
+
+    </div>
+
+    <!-- EXCLUIR MATÉRIA -->
+
+        <div class="modal-materiaE">
+            <ion-icon class="fechar-modalE" name="close-outline"></ion-icon>
+            <div class="modal-headerE">
+                <div class="logo-materia">
+                    <ion-icon name="library-outline"></ion-icon>
+                </div>
+                <p>Deseja excluir a Matéria?</p>
+            </div>
+
+            <div class="modal-bodyE">
+                <div class="opcao-excluir">
+                    <a id="botaoConfirmar" href="#" style="text-decoration: none;">
+                        <div>
+                            <ion-icon name="thumbs-up"></ion-icon>
+                        </div>
+                    </a>    
+
+                    <div>
+                        <a id="botaoCancelar" onclick="fecharModalM()">
+                            <ion-icon name="thumbs-down"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-shadownE">
+
+        </div>
+
 
     <script src="/js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

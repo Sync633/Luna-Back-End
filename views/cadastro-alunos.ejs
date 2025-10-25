@@ -104,7 +104,7 @@
                     <div class="dados4">
                         <p class="ra">RA: <%= aluno.ra %></p>
                         <!-- <a href="/home/cadastro-alunos/delete/<%= aluno.codAluno %>" onclick="return confirm('Deseja realmente excluir o Aluno <%=aluno.nome%>?')"> -->
-                        <ion-icon name="trash" onclick="ativarModal3()"></ion-icon>
+                        <ion-icon name="trash" onclick="ativarModal3(`<%= aluno.codAluno %>`)"></ion-icon>
                         </a>
                     </div>
                 </li>
@@ -201,12 +201,15 @@
 
             <div class="modal-body3">
                 <div class="opcao-excluir">
+                    <a id="botaoConfirmar3" href="#" style="text-decoration: none;">
+                        <div>
+                            <ion-icon name="thumbs-up"></ion-icon>
+                        </div>
+                    </a>
                     <div>
-                        <ion-icon name="thumbs-up"></ion-icon>
-                    </div>
-
-                    <div>
-                        <ion-icon name="thumbs-down"></ion-icon>
+                        <a id="botaoCancelar3" onclick="fecharModal3()">
+                            <ion-icon name="thumbs-down"></ion-icon>
+                        </a>
                     </div>
                 </div>
             </div>

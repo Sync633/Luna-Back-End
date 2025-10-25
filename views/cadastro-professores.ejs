@@ -104,9 +104,7 @@
                     </div>
                     <div class="dados2">
                         <p class="cpf">CPF: <%= professor.cpf %></p>
-                        <a href="/home/cadastro-professores/delete/<%= professor.codProfessor %>" onclick="return confirm('Deseja realmente excluir o Professor <%=professor.nome%>?')">
-                            <ion-icon name="trash"></ion-icon>
-                        </a>
+                            <ion-icon name="trash" onclick="ativarModal2(`<%= professor.codProfessor %>`)"></ion-icon>
                     </div>
                 </li>
                 <% }) %>
@@ -192,8 +190,41 @@
                 </div>
             </form>
         </div>
+
+        <!-- EXCLUIR PROFESSOR -->
+
+        <div class="modal-professor">
+            <ion-icon class="fechar-modal2" name="close-outline"></ion-icon>
+            <div class="modal-header2">
+                <div class="logo-professor">
+                    <ion-icon name="person"></ion-icon>
+                </div>
+                <p>Deseja excluir o Professor?</p>
+            </div>
+
+            <div class="modal-body2">
+                <div class="opcao-excluir">
+                    <a id="botaoConfirmar2" href="#" style="text-decoration: none;">
+                        <div>
+                            <ion-icon name="thumbs-up"></ion-icon>
+                        </div>
+                    </a>
+                    <div>
+                        <a id="botaoCancelar2" onclick="fecharModal2()">
+                            <ion-icon name="thumbs-down"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-shadown2">
+
+        </div>
+
     </div>
     <script src="/js/script.js"></script>
+    <script src="/js/professor.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

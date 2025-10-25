@@ -45,11 +45,10 @@ const mbodyE = document.querySelector('.modal-bodyE');
 const btnFecharE = document.querySelector('.fechar-modalE');
 const mShadownE = document.querySelector('.modal-shadownE');
 
-const botaoConfirmar = document.getElementById("botaoConfirmar");
-const botaoCancelar = document.getElementById("botaoCancelar");
+const botaoConfirmarM = document.getElementById("botaoConfirmarM");
 
 function ativarModalM(codMateria) {
-  botaoConfirmar.href = `/home/deletar-materia/${codMateria}`;
+  botaoConfirmarM.href = `/home/deletar-materia/${codMateria}`;
 
   modalE.style.animation = "modalEIn .5s"
   mShadownE.style.animation = "shadownEIn .5s"
@@ -59,8 +58,8 @@ function ativarModalM(codMateria) {
 }
 
 function fecharModalM() {
-   modalE.style.animation = "modal2Out .5s"
-   mShadownE.style.animation = "shadown2Out .5s"
+   modalE.style.animation = "modalEOut .5s"
+   mShadownE.style.animation = "shadownEOut .5s"
 
     modalE.addEventListener('animationend', function handler() {
         modalE.style.display = "none";

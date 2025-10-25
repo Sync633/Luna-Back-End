@@ -98,8 +98,8 @@
                         <a href="/home/cadastro-turmas?turma=<%= turma.codTurma %>" class="links-rotas">
                             <p class="nome-turma"><%= turma.nome %></p>
                         </a>
-                        <a href="/home/cadastro-turmas/delete-turma/<%= turma.codTurma %>" onclick="return confirm('Deseja realmente excluir a turma <%= turma.nome %>?')" class="link-rotas">
-                            <ion-icon name="trash"></ion-icon>
+                        <a class="links-modals">
+                            <ion-icon name="trash" onclick="ativarModal4(`<%= turma.codTurma %>`)"></ion-icon>
                         </a>
                         </div>
                 <% }) %>
@@ -130,9 +130,7 @@
                         </div>
                         <div class="dados4">
                             <p class="ra"><%= aluno.ra %></p>
-                            <a href="/home/cadastro-turmas/delete-aluno/<%= aluno.codAluno %>/<%= aluno.codTurma %>" onclick="return confirm('Deseja realmente remover o aluno <%= aluno.nome%> da turma <%= turmaSelecionada.nome %>?')">
-                                <ion-icon name="trash"></ion-icon>
-                            </a>
+                            <ion-icon name="trash" onclick="ativarModal5(`<%= aluno.codAluno %>`, `<%= aluno.codEscola %>`)"></ion-icon>
                         </div>
                     </li>
                     <% }) %>
@@ -197,10 +195,76 @@
                 <button class="criar" type="submit" form="cadastro-turma">Criar</button>
             </div>
         </div>
+
+        <!-- EXCLUIR ALUNO -->
+
+        <div class="modal-aluno">
+            <ion-icon class="fechar-modal5" name="close-outline"></ion-icon>
+            <div class="modal-header5">
+                <div class="logo-aluno">
+                    <ion-icon name="school"></ion-icon>
+                </div>
+                <p>Deseja excluir o Aluno?</p>
+            </div>
+
+            <div class="modal-body5">
+                <div class="opcao-excluir">
+                    <a id="botaoConfirmar5" href="#" style="text-decoration: none;">
+                        <div>
+                            <ion-icon name="thumbs-up"></ion-icon>
+                        </div>
+                    </a>
+
+                    <div>
+                        <a id="botaoCancelar5" onclick="fecharModal5()">
+                            <ion-icon name="thumbs-down"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-shadown5">
+
+        </div>
+
+    </div>  
+
+        <!-- EXCLUIR TURMA -->
+            <div class="modal-turma">
+            <ion-icon class="fechar-modal4" name="close-outline"></ion-icon>
+            <div class="modal-header4">
+                <div class="logo-turma">
+                    <ion-icon name="school"></ion-icon>
+                </div>
+                <p>Deseja excluir a Turma?</p>
+            </div>
+
+            <div class="modal-body4">
+                <div class="opcao-excluir">
+                    <div>
+                        <a id="botaoConfirmar4" href="#" style="text-decoration: none;">
+                            <ion-icon name="thumbs-up"></ion-icon>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a id="botaoCancelar4" onclick="fecharModal4()">
+                            <ion-icon name="thumbs-down"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-shadown4">
+
+        </div>
  
     </div>
  
     <script src="/js/script.js"></script>
+    <script src="/js/turma.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

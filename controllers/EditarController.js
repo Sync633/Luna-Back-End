@@ -1,5 +1,5 @@
 import express from "express";
-import { escolas } from "../model/association.js";
+import { escolas, usuarios } from "../model/association.js";
 
 const router = express.Router();
 
@@ -8,8 +8,7 @@ router.get('/editar', async (req, res) => {
     const escola = req.session.usuarioLogado;
 
     if (!escola) {
-      console.log('Usuário não logado, redirecionando para login');
-      return res.redirect('/');
+      return res.redirect("/?erro=escola_nao_encontrada");
     }
 
     console.log('Renderizando página editar com escola:', escola.nome);
@@ -30,8 +29,7 @@ router.post('/editar/update', async (req, res) => {
     const escolaSession = req.session.usuarioLogado;
 
     if (!escolaSession) {
-      console.log('Usuário não logado');
-      return res.redirect('/login');
+      return res.redirect("/?erro=escola_nao_encontrada");
     }
 
     const { nome, email, cnpj, telefone, bairro, cidade, rua, senha } = req.body;
@@ -44,6 +42,7 @@ router.post('/editar/update', async (req, res) => {
       bairro: bairro,
       cidade: cidade,
       rua: rua,
+      senha: senha
     };
 
     // Se senha foi fornecida e não está vazia
@@ -69,13 +68,26 @@ router.post('/editar/update', async (req, res) => {
       console.log('Dados atualizados com sucesso');
       
       // Buscar dados atualizados para atualizar a sessão
-      const escolaAtualizada = await escolas.findOne({
-        where: { codEscola: escolaSession.codEscola }
+      const usuarioAtualizado = await usuarios.findOne({
+        where: { codUsuario: escolaSession.codUsuario },
+          include: [{
+              model: escolas,
+              as: "escolas",
+            }],
       });
       
-      // Atualizar sessão com dados reais do banco
       req.session.usuarioLogado = {
-        ...escolaAtualizada.dataValues
+        codUsuario: usuarioAtualizado.codUsuario,
+        codEscola: usuarioAtualizado.escolas.codEscola,
+        nome: usuarioAtualizado.escolas.nome,
+        email: usuarioAtualizado.email,
+        cnpj: usuarioAtualizado.escolas.cnpj,
+        rua: usuarioAtualizado.escolas.rua,
+        bairro: usuarioAtualizado.escolas.bairro,
+        cidade: usuarioAtualizado.escolas.cidade,
+        telefone: usuarioAtualizado.escolas.telefone,
+        urlFotoEscola: usuarioAtualizado.escolas.urlFotoEscola,
+        senha: usuarioAtualizado.senha, 
       };
       
       console.log('Sessão atualizada com sucesso');

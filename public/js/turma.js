@@ -31,7 +31,6 @@ function fecharModal4() {
     }, { once: true }); 
 }
 
-
 btnFechar4.addEventListener("click", () => {
    modal4.style.animation = "modal4Out .5s"
    mShadown4.style.animation = "shadown4Out .5s"
@@ -43,6 +42,7 @@ btnFechar4.addEventListener("click", () => {
         modal4.removeEventListener('animationend', handler); 
     }, { once: true }); 
 });
+
 
 const modal5 = document.querySelector('.modal-aluno');
 const mheader5 = document.querySelector('.modal-header5');
@@ -56,11 +56,23 @@ const botaoConfirmar5 = document.getElementById("botaoConfirmar5");
 function ativarModal5(codAluno, codEscola) {
   botaoConfirmar5.href = `/home/cadastro-turmas/delete-aluno/${codAluno}/${codEscola}`;
 
-  modal5.style.animation = "modal4In .5s"
-  mShadown5.style.animation = "shadown4In .5s"
+  modal5.style.animation = "modal5In .5s"
+  mShadown5.style.animation = "shadown5In .5s"
 
   modal5.style.display = "flex";
   mShadown5.style.display = "block";
+}
+
+function fecharModal5() {
+   modal5.style.animation = "modal5Out .5s"
+   mShadown5.style.animation = "shadown5Out .5s"
+
+    modal5.addEventListener('animationend', function handler() {
+        modal5.style.display = "none";
+        mShadown5.style.display = "none";
+
+        modal5.removeEventListener('animationend', handler); 
+    }, { once: true }); 
 }
 
 btnFechar5.addEventListener("click", () => {

@@ -46,9 +46,14 @@ header nav ul li {
   font-size: 30px;
 }
 
+.logo-svg {
+  width: 46px;
+  height: 27px;
+}
+
 .img-bg {
   width: 50%;
-  height: 100vh;
+  height: 100%;
   z-index: 5;
   position: absolute;
   left: 0;
@@ -152,487 +157,165 @@ div .icone {
   color: var(--text-color-secondary);
 }
 
-/* Responsividade tela de Login */
-
-@media (max-width: 1024px) {
-  .img-bg {
-    width: 50%;
-    height: 100vh;
-    z-index: 5;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
-  form {
-    width: 350px;
-    margin-left: 70%;
-    margin-top: 50%;
-    font-size: 20px;
-  }
-
-  form h1 {
-    font-size: 45px;
-  }
-
-  div input {
-    width: 100%;
-    height: 30px;
-  }
-
-  div input::placeholder {
-    color: var(--text-color-primary);
-    font-weight: 300;
-    font-size: 16px;
-  }
-
-  .btn-login {
-    width: 120px;
-    height: 40px;
-    font-size: 20px;
-  }
-  .link {
-    margin-left: 70%;
-  }
-}
-
-@media (max-width: 768px) {
-  form {
-    width: 400px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    font-size: 22px;
-    margin-top: 40%;
-  }
-
-  form h1 {
-    text-align: center;
-    font-size: 45px;
-  }
-
-  .img-bg {
-    opacity: 0;
-  }
-
-  header nav ul li {
-    color: var(--text-color-primary);
-  }
-
-  div input {
-    width: 100%;
-    height: 30px;
-  }
-
-  div input::placeholder {
-    color: var(--text-color-primary);
-    font-weight: 300;
-    font-size: 18px;
-  }
-
-  .btn-login {
-    width: 140px;
-    height: 45px;
-    font-size: 25px;
-  }
-
-  .link {
-    margin-left: 0%;
-  }
-}
-
-@media (max-width: 425px) {
-  svg path {
-    opacity: 0;
-  }
-
-  header {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    /* background-color: #252525; */
-    height: 80px; /* ou o valor que desejar */
-  }
-
-  header nav {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-
-  header ul {
-    list-style: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  header li.luna {
-    text-align: center;
-    font-family: "MuseoModerno", sans-serif;
-    color: var(--text-color-primary);
-    font-weight: 100;
-    font-size: 30px;
-  }
-
-  form {
-    width: 300px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    font-size: 22px;
-    margin-top: 40%;
-  }
-
-  form h1 {
-    text-align: center;
-    font-size: 45px;
-  }
-
-  .img-bg {
-    opacity: 0;
-  }
-
-  header nav ul li {
-    color: var(--text-color-primary);
-  }
-
-  div input {
-    width: 100%;
-    height: 30px;
-  }
-
-  div input::placeholder {
-    color: var(--text-color-primary);
-    font-weight: 300;
-    font-size: 18px;
-  }
-
-  .btn-login {
-    width: 140px;
-    height: 45px;
-    font-size: 25px;
-  }
-}
-
-@media (max-width: 375px) {
-  svg path {
-    opacity: 0;
-  }
-
-  header {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    /* background-color: #252525; */
-    height: 80px; /* ou o valor que desejar */
-  }
-
-  header nav {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-
-  header ul {
-    list-style: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  header li.luna {
-    text-align: center;
-    font-family: "MuseoModerno", sans-serif;
-    color: var(--text-color-primary);
-    font-weight: 100;
-    font-size: 30px;
-  }
-
-  form {
-    width: 300px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    font-size: 22px;
-    margin-top: 40%;
-  }
-
-  form h1 {
-    text-align: center;
-    font-size: 45px;
-  }
-
-  .img-bg {
-    opacity: 0;
-  }
-
-  header nav ul li {
-    color: var(--text-color-primary);
-  }
-
-  div input {
-    width: 100%;
-    height: 30px;
-  }
-
-  div input::placeholder {
-    color: var(--text-color-primary);
-    font-weight: 300;
-    font-size: 18px;
-  }
-
-  .btn-login {
-    width: 140px;
-    height: 45px;
-    font-size: 25px;
-  }
-}
-
-@media (max-width: 320px) {
-  svg path {
-    opacity: 0;
-  }
-
-  header {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    /* background-color: #252525; */
-    height: 80px; /* ou o valor que desejar */
-  }
-
-  header nav {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-
-  header ul {
-    list-style: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  header li.luna {
-    text-align: center;
-    font-family: "MuseoModerno", sans-serif;
-    color: var(--text-color-primary);
-    font-weight: 100;
-    font-size: 30px;
-  }
-
-  form {
-    width: 250px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    font-size: 18px;
-    margin-top: 40%;
-  }
-
-  form h1 {
-    text-align: center;
-    font-size: 35px;
-  }
-
-  .img-bg {
-    opacity: 0;
-  }
-
-  header nav ul li {
-    color: var(--text-color-primary);
-  }
-
-  div input {
-    width: 100%;
-    height: 30px;
-  }
-
-  div input::placeholder {
-    color: var(--text-color-primary);
-    font-weight: 300;
-    font-size: 10px;
-  }
-
-  .btn-login {
-    width: 110px;
-    height: 40px;
-    font-size: 20px;
-  }
-}
-
 /* TELA DE CADASTRO */
 
 .principal {
-    display: flex;
-    /* justify-content: flex-start; */
-    /* align-items: flex-start; */
-    flex-direction: column;
-    width: 50vw;
-    height: 80vh;
-    margin-top: 15vh;
-    background-color: transparent;
-    margin-left: 40%;
-    padding: 0;
+  display: flex;
+  /* justify-content: flex-start; */
+  /* align-items: flex-start; */
+  flex-direction: column;
+  width: 50vw;
+  height: 80vh;
+  margin-top: 15vh;
+  margin-left: 40%;
+  padding: 0;
 }
 
 .principal h1 {
-    width: 100%;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    color: var(--text-color-primary);
-       margin-left: 85px;
-    margin-bottom: 5px;
-
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--text-color-primary);
+  text-align: center;
+  /* margin-left: 2px; */
+  margin-bottom: 10px;
 }
 
 .form-cadastro {
-    all: unset;
-    display: flex;
-    background-color: transparent;
-    width: 100%;
-    flex-direction: column;
-    /* min-height: 100%; */
-    margin: 20px 0;
-    padding: 0;
+  all: unset;
+  display: flex;
+  background-color: transparent;
+  width: 100%;
+  flex-direction: column;
+  /* min-height: 100%; */
+  margin: 20px 0;
+  padding: 0;
 }
 
 .grupos-container {
-    display: flex;
-    gap: 10px;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .grupo-esquerdo1,
 .grupo-direita1 {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 50%;
-    height: 70%;
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 50%;
+  height: 70%;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
 }
 
 .box {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    width: 300px;
-    color: var(--background-color);
-    gap: 50px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 300px;
+  color: var(--background-color);
+  gap: 50px;
 }
 
 .box input {
-    margin: 0;
-    padding: 0;
-    border-color: var(--text-color-secondary);
-    color: var(--text-color-primary);
+  margin: 0;
+  padding: 0;
+  border-color: var(--text-color-secondary);
+  color: var(--text-color-primary);
 }
 
 .box input::placeholder {
-    margin: 0;
-    padding: 0;
-    color: var(--text-color-secondary);
-    font-size: 16px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color-secondary);
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
 }
 
 .box label {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 60px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    color: var(--text-color-primary);
+  margin: 0;
+  padding: 0;
+  margin-bottom: 60px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text-color-primary);
 }
 
 .box ion-icon {
-    font-size: 16px;
-    color: var(--text-color-secondary);
+  font-size: 16px;
+  color: var(--text-color-secondary);
 }
 
 .btn-imagem1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
 }
 
 .btn-camera1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 40px;
-    cursor: pointer;
-    gap: 10px;
-    background-color: var(--text-color-secondary);
-    color: var(--text-color-tertiary);
-    border-radius: 5px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  gap: 10px;
+  background-color: var(--text-color-secondary);
+  color: var(--text-color-tertiary);
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
 }
 
 .btn-camera1:hover {
-    background-color: #288c95;
-    color: var(--text-color-tertiary);
+  background-color: #288c95;
+  color: var(--text-color-tertiary);
 }
 
 .btn-camera1 ion-icon {
-    font-size: 30px;
-    color: inherit;
+  font-size: 30px;
+  color: inherit;
 }
 
 .box-cadastrar {
-    display: flex;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+  display: flex;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .btn-cadastrar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--text-color-secondary);
-    width: 180px;
-    height: 50px;
-    border: none;
-    border-radius: 10px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 25px;
-    text-decoration: none;
-    color: var(--background-color);
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-color-secondary);
+  width: 180px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  text-decoration: none;
+  color: var(--background-color);
+  cursor: pointer;
 }
-
 
 /* ---------------------------- NAV-LATERAL ----------------------------- */
 
@@ -727,6 +410,7 @@ div .icone {
 .content {
   position: absolute;
   display: flex;
+  overflow: hidden;
   right: 0;
   height: 100vh;
   width: 92vw;
@@ -837,7 +521,7 @@ div .icone {
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  width: auto; 
+  width: auto;
   min-width: 300px;
   height: 40px;
   white-space: nowrap;
@@ -942,7 +626,8 @@ div .icone {
   margin-left: 50px;
   border-radius: 15px;
   padding: 0;
-  background-color: #252525;
+  background-color: var(--text-color-primary);
+  box-shadow: 0px 0px 23px -4px var(--blur);
 }
 
 .materia {
@@ -1027,16 +712,18 @@ div .icone {
   align-items: center;
   /* justify-content: flex-start; */
   flex-direction: column;
-  width: 500px;
+  width: 510px;
   height: 80vh;
   margin-top: 8%;
   margin-left: 50px;
   border-radius: 15px;
-  background-color: var(--background-color);
+  background-color: var(--text-color-primary);
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.lista img {
-  top: 0;
+.img-grande {
+  margin-top: 15px;
+  margin-bottom: 20px;
   width: 80%;
 }
 
@@ -1075,6 +762,9 @@ div .icone {
 
 .img-prof {
   display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -1082,8 +772,10 @@ div .icone {
 }
 
 .img-prof img {
-  height: 40px;
-  width: 40px;
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -1108,7 +800,7 @@ div .icone {
   align-items: flex-start;
   flex-direction: column;
   width: 50%;
-  margin-top: 5%;
+  margin-top: 100px;
   background-color: transparent;
   margin-left: auto;
   padding: 0;
@@ -1373,12 +1065,13 @@ div .icone {
 
 .img-escola-dados {
   display: flex;
+  flex: 0 0 auto;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 10px;
   background-color: transparent;
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -1397,9 +1090,9 @@ div .icone {
   flex-direction: column;
   background-color: var(--text-color-primary);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 40px;
+  margin-top: 20px;
   width: 250px;
-  height: 500px;
+  height: 450px;
   border-radius: 10px;
   gap: 20px;
 }
@@ -1409,8 +1102,9 @@ div .icone {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  height: 100%;
   margin-top: 10px;
-  gap: 20px;
+  gap: 10px;
 }
 
 .box3 {
@@ -1438,17 +1132,18 @@ div .icone {
   align-items: center;
   /* justify-content: flex-start; */
   flex-direction: column;
-  width: 500px;
+  width: 510px;
   height: 80vh;
   margin-top: 8%;
   margin-left: 50px;
   border-radius: 15px;
-  background-color: var(--background-color);
+  background-color: var(--text-color-primary);
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.lista2 img {
-  margin-top: 5px;
-  margin-bottom: 15px;
+.img-grande2 {
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
 .list-aluno {
@@ -1475,6 +1170,7 @@ div .icone {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 16px;
+  object-fit: cover;
 }
 
 .dados3 {
@@ -1482,6 +1178,7 @@ div .icone {
   align-items: center;
   justify-content: center;
   gap: 15px;
+  object-fit: cover;
 }
 
 .img-aluno {
@@ -1490,6 +1187,7 @@ div .icone {
   width: 40px;
   border-radius: 50%;
   overflow: hidden;
+  object-fit: cover;
 }
 
 .img-aluno img {
@@ -1631,7 +1329,7 @@ div .icone {
   align-items: flex-start;
   /* justify-content: flex-start; */
   flex-direction: column;
-  width: 550px;
+  width: 540px;
   height: 80vh;
   margin-top: 8%;
   margin-left: 50px;
@@ -1746,6 +1444,7 @@ div .icone {
   width: 150px;
   height: auto;
   z-index: 10;
+  background-color: transparent;
   pointer-events: none;
 }
 
@@ -1819,7 +1518,8 @@ div .icone {
   flex-direction: column;
   width: 450px;
   height: 350px;
-  background-color: var(--background-color);
+  background-color: var(--text-color-primary);
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 
@@ -1834,6 +1534,7 @@ div .icone {
   margin: 30px auto;
   border-radius: 5px;
   background-color: var(--text-color-primary);
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .pesquisar input {
@@ -1912,8 +1613,8 @@ input[type="checkbox"]:checked + .checkbox {
   height: 40px;
   border-radius: 5px;
   border: none;
-  background-color: var(--text-color-secondary);
-  color: var(--background-color);
+  background-color: var(--background-color);
+  color: var(--text-color-secondary);
   font-size: 20px;
   font-family: "Inter", sans-serif;
   font-weight: 700;
@@ -1922,11 +1623,11 @@ input[type="checkbox"]:checked + .checkbox {
 
 /*ALERTAS*/
 
-.body-modal{
-  background-color: #fff
+.body-modal {
+  background-color: #fff;
 }
 
-.modal-materia{
+.modal-materia {
   position: relative;
   display: flex;
   background-color: var(--text-color-secondary);
@@ -1943,25 +1644,25 @@ input[type="checkbox"]:checked + .checkbox {
   animation: modalIn 0.5s ease;
 }
 
-@keyframes modalIn{
-  0%{
+@keyframes modalIn {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-@keyframes modalOut{
-  0%{
+@keyframes modalOut {
+  0% {
     opacity: 1;
   }
-  100%{
+  100% {
     opacity: 0;
   }
 }
 
-.modal-header{
+.modal-header {
   display: flex;
   width: 100%;
   height: 100px;
@@ -1972,11 +1673,11 @@ input[type="checkbox"]:checked + .checkbox {
   font-size: 20px;
 }
 
-.modal-header p{
+.modal-header p {
   margin-top: 20px;
 }
 
-.modal-body{
+.modal-body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1984,7 +1685,7 @@ input[type="checkbox"]:checked + .checkbox {
   margin-top: 20px;
 }
 
-.logo-materia{
+.logo-materia {
   display: flex;
   width: 70px;
   height: 70px;
@@ -1995,13 +1696,11 @@ input[type="checkbox"]:checked + .checkbox {
   justify-content: center;
 }
 
-.logo-materia ion-icon{
+.logo-materia ion-icon {
   color: var(--text-color-secondary);
   width: 40px;
   height: 40px;
 }
-
-
 
 .fechar-modal {
   position: absolute;
@@ -2013,91 +1712,89 @@ input[type="checkbox"]:checked + .checkbox {
   transition: color 0.2s;
 }
 
+.cadastro-materia {
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* flex-direction: column; */
+  /* min-height: 100%; */
+  margin: 15px 0;
+  padding: 0;
+}
 
-  .cadastro-materia{
-      display: flex;
-      background-color: transparent;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-      /* flex-direction: column; */
-      /* min-height: 100%; */
-      margin: 15px 0;
-      padding: 0;
+.box8 {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 300px;
+  color: var(--background-color);
+  gap: 30px;
+  font-size: 16px;
+}
 
-  }
+.box8 input {
+  margin-top: 20px;
+  padding: 0;
+  border-color: var(--background-color);
+  color: var(--text-color-tertiary);
+}
 
-  .box8 {
-      display: flex;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      width: 300px;
-      color: var(--background-color);
-      gap: 30px;
-      font-size: 16px;
-  }
+.box8 input::placeholder {
+  margin: 0;
+  padding: 0;
+  color: var(--text-color-tertiary);
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
 
-  .box8 input {
-      margin-top: 20px;
-      padding: 0;
-      border-color: var(--background-color);
-      color: var(--text-color-tertiary);
-  }
+.box8 label {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--background-color);
+}
 
-  .box8 input::placeholder {
-      margin: 0;
-      padding: 0;
-      color: var(--text-color-tertiary);
-      font-size: 14px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 300;
-  }
+.box8 ion-icon {
+  font-size: 22px;
+  color: var(--background-color);
+}
 
-  .box8 label {
-      margin: 0;
-      padding: 0;
-      margin-bottom: 40px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 700;
-      font-size: 16px;
-      color: var(--background-color);
-  }
-
-  .box8 ion-icon {
-      font-size: 22px;
-      color: var(--background-color);
-  }
-
-  .box-salvar2 {
-    display: flex;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    /* margin-top: 20px; */
+.box-salvar2 {
+  display: flex;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 20px; */
 }
 
 .btn-salvar2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--background-color);
-    width: 160px;
-    height: 40px;
-    border: none;
-    border-radius: 5px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    text-decoration: none;
-    color: var(--text-color-secondary);
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+  width: 160px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--text-color-secondary);
+  cursor: pointer;
 }
 
-.modal-shadown{
+.modal-shadown {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
@@ -2106,29 +1803,29 @@ input[type="checkbox"]:checked + .checkbox {
   animation: shadownIn 0.5s;
 }
 
-@keyframes shadownIn{
-  0%{
+@keyframes shadownIn {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-@keyframes shadownOut{
-  0%{
+@keyframes shadownOut {
+  0% {
     opacity: 1;
   }
-  100%{
+  100% {
     opacity: 0;
   }
 }
 
-.body-1{
-  background-color: #fff
+.body-1 {
+  background-color: #fff;
 }
 
-.modal-professor{
+.modal-professor {
   position: fixed;
   display: flex;
   background-color: var(--text-color-secondary);
@@ -2147,25 +1844,25 @@ input[type="checkbox"]:checked + .checkbox {
   animation: modal2In 0.5s ease;
 }
 
-@keyframes modal2In{
-  0%{
+@keyframes modal2In {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-@keyframes modal2Out{
-  0%{
+@keyframes modal2Out {
+  0% {
     opacity: 1;
   }
-  100%{
+  100% {
     opacity: 0;
   }
 }
 
-.modal-header2{
+.modal-header2 {
   display: flex;
   width: 100%;
   height: 100px;
@@ -2176,11 +1873,11 @@ input[type="checkbox"]:checked + .checkbox {
   font-size: 18px;
 }
 
-.modal-header2 p{
+.modal-header2 p {
   margin-top: 20px;
 }
 
-.modal-body2{
+.modal-body2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2189,7 +1886,7 @@ input[type="checkbox"]:checked + .checkbox {
   margin-top: 10px;
 }
 
-.opcao-excluir{
+.opcao-excluir {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2198,7 +1895,7 @@ input[type="checkbox"]:checked + .checkbox {
   gap: 60px;
 }
 
-.opcao-excluir a{
+.opcao-excluir a {
   background-color: #005a63;
   height: 100%;
   width: 120px;
@@ -2210,11 +1907,11 @@ input[type="checkbox"]:checked + .checkbox {
   cursor: pointer;
 }
 
-.opcao-excluir ion-icon{
+.opcao-excluir ion-icon {
   font-size: 20px;
 }
 
-.logo-professor{
+.logo-professor {
   display: flex;
   width: 60px;
   height: 60px;
@@ -2225,7 +1922,7 @@ input[type="checkbox"]:checked + .checkbox {
   justify-content: center;
 }
 
-.logo-professor ion-icon{
+.logo-professor ion-icon {
   color: var(--text-color-secondary);
   width: 30px;
   height: 30px;
@@ -2241,7 +1938,7 @@ input[type="checkbox"]:checked + .checkbox {
   transition: color 0.2s;
 }
 
-.modal-shadown2{
+.modal-shadown2 {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
@@ -2250,25 +1947,25 @@ input[type="checkbox"]:checked + .checkbox {
   animation: shadown2In 0.5s;
 }
 
-@keyframes shadown2In{
-  0%{
+@keyframes shadown2In {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-@keyframes shadown2Out{
-  0%{
+@keyframes shadown2Out {
+  0% {
     opacity: 1;
   }
-  100%{
+  100% {
     opacity: 0;
   }
 }
 
-.modal-aluno{
+.modal-aluno {
   position: fixed;
   display: flex;
   background-color: var(--text-color-secondary);
@@ -2287,25 +1984,25 @@ input[type="checkbox"]:checked + .checkbox {
   animation: modal3In 0.5s ease;
 }
 
-@keyframes modal3In{
-  0%{
+@keyframes modal3In {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-@keyframes modal3Out{
-  0%{
+@keyframes modal3Out {
+  0% {
     opacity: 1;
   }
-  100%{
+  100% {
     opacity: 0;
   }
 }
 
-.modal-header3{
+.modal-header3 {
   display: flex;
   width: 100%;
   height: 100px;
@@ -2316,11 +2013,11 @@ input[type="checkbox"]:checked + .checkbox {
   font-size: 18px;
 }
 
-.modal-header3 p{
+.modal-header3 p {
   margin-top: 20px;
 }
 
-.modal-body3{
+.modal-body3 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2329,7 +2026,7 @@ input[type="checkbox"]:checked + .checkbox {
   margin-top: 10px;
 }
 
-.opcao-excluir{
+.opcao-excluir {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2338,7 +2035,7 @@ input[type="checkbox"]:checked + .checkbox {
   gap: 60px;
 }
 
-.opcao-excluir div{
+.opcao-excluir a {
   background-color: #005a63;
   height: 100%;
   width: 120px;
@@ -2350,11 +2047,11 @@ input[type="checkbox"]:checked + .checkbox {
   cursor: pointer;
 }
 
-.opcao-excluir ion-icon{
+.opcao-excluir ion-icon {
   font-size: 20px;
 }
 
-.logo-aluno{
+.logo-aluno {
   display: flex;
   width: 60px;
   height: 60px;
@@ -2365,7 +2062,7 @@ input[type="checkbox"]:checked + .checkbox {
   justify-content: center;
 }
 
-.logo-aluno ion-icon{
+.logo-aluno ion-icon {
   color: var(--text-color-secondary);
   width: 30px;
   height: 30px;
@@ -2381,7 +2078,7 @@ input[type="checkbox"]:checked + .checkbox {
   transition: color 0.2s;
 }
 
-.modal-shadown3{
+.modal-shadown3 {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
@@ -2390,25 +2087,25 @@ input[type="checkbox"]:checked + .checkbox {
   animation: shadown3In 0.5s;
 }
 
-@keyframes shadown3In{
-  0%{
+@keyframes shadown3In {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-@keyframes shadown3Out{
-  0%{
+@keyframes shadown3Out {
+  0% {
     opacity: 1;
   }
-  100%{
+  100% {
     opacity: 0;
   }
 }
 
-.modal-turma{
+.modal-turma {
   position: fixed;
   display: flex;
   background-color: var(--text-color-secondary);
@@ -2427,25 +2124,25 @@ input[type="checkbox"]:checked + .checkbox {
   animation: modal4In 0.5s ease;
 }
 
-@keyframes modal4In{
-  0%{
+@keyframes modal4In {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-@keyframes modal4Out{
-  0%{
+@keyframes modal4Out {
+  0% {
     opacity: 1;
   }
-  100%{
+  100% {
     opacity: 0;
   }
 }
 
-.modal-header4{
+.modal-header4 {
   display: flex;
   width: 100%;
   height: 100px;
@@ -2456,11 +2153,11 @@ input[type="checkbox"]:checked + .checkbox {
   font-size: 18px;
 }
 
-.modal-header4 p{
+.modal-header4 p {
   margin-top: 20px;
 }
 
-.modal-body4{
+.modal-body4 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2469,7 +2166,7 @@ input[type="checkbox"]:checked + .checkbox {
   margin-top: 10px;
 }
 
-.opcao-excluir{
+.opcao-excluir {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2478,7 +2175,7 @@ input[type="checkbox"]:checked + .checkbox {
   gap: 60px;
 }
 
-.opcao-excluir div{
+.opcao-excluir div {
   background-color: #005a63;
   height: 100%;
   width: 120px;
@@ -2490,11 +2187,11 @@ input[type="checkbox"]:checked + .checkbox {
   cursor: pointer;
 }
 
-.opcao-excluir ion-icon{
+.opcao-excluir ion-icon {
   font-size: 20px;
 }
 
-.logo-turma{
+.logo-turma {
   display: flex;
   width: 60px;
   height: 60px;
@@ -2505,7 +2202,7 @@ input[type="checkbox"]:checked + .checkbox {
   justify-content: center;
 }
 
-.logo-turma ion-icon{
+.logo-turma ion-icon {
   color: var(--text-color-secondary);
   width: 30px;
   height: 30px;
@@ -2521,7 +2218,7 @@ input[type="checkbox"]:checked + .checkbox {
   transition: color 0.2s;
 }
 
-.modal-shadown4{
+.modal-shadown4 {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
@@ -2530,25 +2227,25 @@ input[type="checkbox"]:checked + .checkbox {
   animation: shadown4In 0.5s;
 }
 
-@keyframes shadown4In{
-  0%{
+@keyframes shadown4In {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-@keyframes shadown4Out{
-  0%{
+@keyframes shadown4Out {
+  0% {
     opacity: 1;
   }
-  100%{
+  100% {
     opacity: 0;
   }
 }
 
-.modal-materiaE{
+.modal-materiaE {
   position: fixed;
   display: flex;
   background-color: var(--text-color-secondary);
@@ -2567,25 +2264,25 @@ input[type="checkbox"]:checked + .checkbox {
   animation: modalEIn 0.5s ease;
 }
 
-@keyframes modalEIn{
-  0%{
+@keyframes modalEIn {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-@keyframes modalEOut{
-  0%{
+@keyframes modalEOut {
+  0% {
     opacity: 1;
   }
-  100%{
+  100% {
     opacity: 0;
   }
 }
 
-.modal-headerE{
+.modal-headerE {
   display: flex;
   width: 100%;
   height: 100px;
@@ -2596,11 +2293,11 @@ input[type="checkbox"]:checked + .checkbox {
   font-size: 18px;
 }
 
-.modal-headerE p{
+.modal-headerE p {
   margin-top: 20px;
 }
 
-.modal-bodyE{
+.modal-bodyE {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2609,7 +2306,7 @@ input[type="checkbox"]:checked + .checkbox {
   margin-top: 10px;
 }
 
-.opcao-excluir{
+.opcao-excluir {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2618,7 +2315,7 @@ input[type="checkbox"]:checked + .checkbox {
   gap: 60px;
 }
 
-.opcao-excluir div{
+.opcao-excluir div {
   background-color: #005a63;
   height: 100%;
   width: 120px;
@@ -2630,11 +2327,11 @@ input[type="checkbox"]:checked + .checkbox {
   cursor: pointer;
 }
 
-.opcao-excluir ion-icon{
+.opcao-excluir ion-icon {
   font-size: 20px;
 }
 
-.logo-materia{
+.logo-materia {
   display: flex;
   width: 60px;
   height: 60px;
@@ -2645,7 +2342,7 @@ input[type="checkbox"]:checked + .checkbox {
   justify-content: center;
 }
 
-.logo-materia ion-icon{
+.logo-materia ion-icon {
   color: var(--text-color-secondary);
   width: 30px;
   height: 30px;
@@ -2661,7 +2358,7 @@ input[type="checkbox"]:checked + .checkbox {
   transition: color 0.2s;
 }
 
-.modal-shadownE{
+.modal-shadownE {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
@@ -2669,25 +2366,6 @@ input[type="checkbox"]:checked + .checkbox {
   display: none;
   animation: shadown4In 0.5s;
 }
-
-@keyframes shadownEIn{
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-
-@keyframes shadownEOut{
-  0%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
-}
-
 
 /* CSS PARA O SELECT-OPTION da tela CADASTRO-PROFESSORES */
 .emailProfessor {
@@ -2770,4 +2448,1636 @@ option {
   z-index: 102;
   display: none;
   animation: shadown4In 0.5s;
+}
+
+@keyframes shadownEIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shadownEOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*Responsividade*/
+
+@media (max-width: 1440px) {
+  .professores {
+    width: 30%;
+    margin-top: 8vh;
+    margin-top: 70px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15%;
+  }
+
+  .cadastro-professores {
+    width: 85%;
+    align-items: center;
+  }
+
+  .cadastro-professores .grupos-container {
+    gap: 50px;
+  }
+
+  .box2 {
+    width: 250px;
+  }
+
+  .btn-salvar-pro {
+    width: 50%;
+  }
+
+  .alunos {
+    width: 30%;
+    margin-top: 8vh;
+    margin-top: 70px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15%;
+  }
+
+  .cadastro-alunos {
+    width: 85%;
+    align-items: center;
+  }
+
+  .cadastro-alunos .grupos-container {
+    gap: 50px;
+  }
+
+  .box4 {
+    width: 250px;
+  }
+
+  .btn-salvar-aluno {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Tela Login */
+  .img-bg {
+    width: 50%;
+    height: 100vh;
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  form {
+    width: 350px;
+    margin-left: 70%;
+    margin-top: 50%;
+    font-size: 20px;
+  }
+
+  form h1 {
+    font-size: 45px;
+  }
+
+  div input {
+    width: 100%;
+    height: 30px;
+  }
+
+  div input::placeholder {
+    color: var(--text-color-primary);
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  .btn-login {
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+  }
+  .link {
+    margin-left: 70%;
+  }
+
+  /* TELA CADASTRO */
+
+  .principal {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 80vh;
+    margin-top: 10vh;
+    margin-left: 40%;
+    padding: 0;
+  }
+
+  .principal h1 {
+    font-size: 35px;
+  }
+
+  .grupo-esquerdo1,
+  .grupo-direita1 {
+    gap: 10px;
+  }
+
+  .box {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 230px;
+    color: var(--background-color);
+    gap: 50px;
+  }
+
+  .box input::placeholder {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color-secondary);
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+  }
+
+  .box label {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 60px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-color-primary);
+  }
+
+  .btn-cadastrar {
+    width: 160px;
+    height: 50px;
+    font-size: 25px;
+  }
+
+  /* NAV-LATERAL */
+
+  .menu-lateral ion-icon {
+    font-size: 35px;
+  }
+  .menu-lateral.active ul li:hover {
+    width: 220px;
+  }
+
+  .menu-lateral ul li a {
+    font-size: 16px;
+  }
+
+  .menu-lateral ul li.sair {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  .menu-lateral ul li.sair ion-icon {
+    font-size: 40px;
+  }
+  .content {
+    width: 90vw;
+  }
+
+  .content.active {
+    width: 80vw;
+  }
+
+  /* TELA HOME */
+
+  .nav-pesquisa {
+    width: 90%;
+  }
+
+  .nav-pesquisa svg {
+    margin-right: 50px;
+  }
+
+  .nav-pesquisa.active {
+    width: 80%;
+  }
+
+  .grupo-itens-escola p {
+    font-size: 16px;
+  }
+
+  .icones {
+    font-size: 28px;
+  }
+
+  .img-escola {
+    height: 40px;
+    width: 40px;
+  }
+
+  .pastas {
+    display: flex;
+    align-items: center;
+    height: 200px;
+    margin-top: 10%;
+    margin-left: 50px;
+    gap: 25px;
+    padding: 0;
+  }
+
+  .pasta {
+    position: relative;
+    width: 170px;
+    height: 100px;
+    background-color: var(--background-color);
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin-bottom: 30px;
+    color: var(--text-color-secondary);
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+
+  .pasta::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 60px;
+    height: 15px;
+    background-color: var(--background-color);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 4px;
+  }
+
+  .pasta ion-icon {
+    position: absolute;
+    font-size: 25px;
+    margin-top: 5px;
+    right: 10px;
+  }
+
+  .pasta p {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .pasta:hover {
+    transform: translateY(-5px);
+  }
+
+  .materias {
+    height: 380px;
+    width: 570px;
+    margin-top: 30%;
+  }
+
+  .materia {
+    width: 160px;
+    height: 100px;
+  }
+
+  .materia p {
+    font-size: 12px;
+  }
+
+  .box-img img {
+    width: 200px;
+    height: 140px;
+  }
+
+  .list-materias {
+    width: 770px;
+    height: 300px;
+    margin: 30px 20px;
+  }
+
+  .list-materias label {
+    height: 50px;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .list-materias ion-icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  /* TELA PROFESSORES */
+
+  .lista {
+    width: 400px;
+    margin-top: 12%;
+  }
+
+  .list-pro {
+    width: 88%;
+  }
+
+  .dados-pro {
+    font-size: 14px;
+  }
+
+  .dados2 {
+    font-size: 14px;
+  }
+  .dados2 ion-icon {
+    font-size: 18px;
+  }
+
+  /* CADASTRO PROFESSORES */
+  .professores {
+    width: 30%;
+    margin-top: 8vh;
+    margin-top: 70px;
+    margin-left: 15%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .professores h1 {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .cadastro-professores {
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+  }
+
+  .cadastro-professores .grupos-container {
+    gap: 50px;
+  }
+
+  .grupo-esquerdo,
+  .grupo-direita {
+    gap: 5px;
+    width: 40%;
+  }
+
+  .box2 {
+    width: 190px;
+  }
+
+  .box2 input::placeholder {
+    font-size: 12px;
+  }
+
+  .box2 label {
+    font-size: 14px;
+  }
+
+  .box2 ion-icon {
+    font-size: 20px;
+  }
+
+  .professores p {
+    font-size: 14px;
+  }
+
+  .btn-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+  }
+
+  .btn-camera {
+    width: 90px;
+    height: 35px;
+  }
+
+  .btn-camera ion-icon {
+    font-size: 28px;
+  }
+
+  .salvar {
+    display: flex;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-salvar-pro {
+    padding: 10px 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--background-color);
+    color: var(--text-color-secondary);
+    width: 45%;
+    height: 40px;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  /* TELA ALUNOS */
+
+  .lista2 {
+    width: 400px;
+    margin-top: 12%;
+  }
+
+  .list-aluno {
+    width: 88%;
+  }
+
+  .dados-aluno {
+    font-size: 14px;
+  }
+
+  .dados3 {
+    font-size: 14px;
+  }
+  .dados3 ion-icon {
+    font-size: 18px;
+  }
+
+  /* CADASTRO ALUNO */
+  .alunos {
+    width: 30%;
+    margin-top: 70px;
+    margin-left: 15%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .alunos h1 {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .cadastro-alunos {
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+  }
+
+  .cadastro-alunos .grupos-container {
+    gap: 50px;
+  }
+
+  .grupo-esquerdo3,
+  .grupo-direita3 {
+    gap: 5px;
+    width: 40%;
+  }
+
+  .box4 {
+    width: 190px;
+  }
+
+  .box4 input::placeholder {
+    font-size: 12px;
+  }
+
+  .box4 label {
+    font-size: 14px;
+  }
+
+  .box4 ion-icon {
+    font-size: 20px;
+  }
+
+  .alunos p {
+    font-size: 14px;
+  }
+
+  .salvar2 {
+    display: flex;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-salvar-aluno {
+    padding: 10px 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--background-color);
+    color: var(--text-color-secondary);
+    width: 45%;
+    height: 40px;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  /*TELA TURMAS*/
+
+  .lista-turma {
+    width: 400px;
+    margin-top: 12%;
+  }
+
+  .pasta-turma {
+    height: 110px;
+    width: 160px;
+  }
+
+  .pasta-turma p {
+    font-size: 16px;
+  }
+
+  /* CADASTRO TURMAS */
+  .turma {
+    width: 30%;
+    margin-top: 70px;
+    margin-left: 15%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .turma h1 {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .cadastro-turma {
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+  }
+
+  .box5 {
+    width: 290px;
+  }
+
+  .box5 input::placeholder {
+    font-size: 14px;
+  }
+
+  .box5 label {
+    font-size: 16px;
+  }
+
+  .box5 ion-icon {
+    font-size: 20px;
+  }
+
+  .adicionar {
+    width: 350px;
+    height: 280px;
+  }
+
+  .pesquisar {
+    width: 300px;
+    height: 40px;
+    margin: 20px auto;
+  }
+
+  .lista-adicionar {
+    margin: 5px 20px;
+  }
+
+  .dados-alunosAdicionar {
+    background-color: var(--text-color-primary);
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    min-height: 50px;
+    display: flex;
+    padding: 0 15px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  form {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    margin-top: 40%;
+  }
+
+  form h1 {
+    text-align: center;
+    font-size: 45px;
+  }
+
+  .img-bg {
+    opacity: 0;
+  }
+
+  header nav ul li {
+    color: var(--text-color-primary);
+  }
+
+  div input {
+    width: 100%;
+    height: 30px;
+  }
+
+  div input::placeholder {
+    color: var(--text-color-primary);
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+  .btn-login {
+    width: 140px;
+    height: 45px;
+    font-size: 25px;
+  }
+
+  .link {
+    margin-left: 0%;
+  }
+
+  /* TELA CADASTRO */
+
+  .principal {
+    width: 100%;
+    height: 80vh;
+    margin: 100px auto;
+  }
+
+  .principal h1 {
+    font-size: 40px;
+  }
+
+  .grupos-container {
+    gap: 80px;
+  }
+
+  .box {
+    width: 300px;
+  }
+
+  .box input::placeholder {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color-secondary);
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+  }
+
+  .box label {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 425px) {
+  svg path {
+    opacity: 0;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #252525; */
+    height: 80px; /* ou o valor que desejar */
+  }
+
+  header nav {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  header li.luna {
+    text-align: center;
+    font-family: "MuseoModerno", sans-serif;
+    color: var(--text-color-primary);
+    font-weight: 100;
+    font-size: 30px;
+  }
+
+  form {
+    width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    margin-top: 40%;
+  }
+
+  form h1 {
+    text-align: center;
+    font-size: 45px;
+  }
+
+  .img-bg {
+    opacity: 0;
+  }
+
+  header nav ul li {
+    color: var(--text-color-primary);
+  }
+
+  div input {
+    width: 100%;
+    height: 30px;
+  }
+
+  div input::placeholder {
+    color: var(--text-color-primary);
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+  .btn-login {
+    width: 140px;
+    height: 45px;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 375px) {
+  svg path {
+    opacity: 0;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #252525; */
+    height: 80px; /* ou o valor que desejar */
+  }
+
+  header nav {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  header li.luna {
+    text-align: center;
+    font-family: "MuseoModerno", sans-serif;
+    color: var(--text-color-primary);
+    font-weight: 100;
+    font-size: 30px;
+  }
+
+  form {
+    width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    margin-top: 40%;
+  }
+
+  form h1 {
+    text-align: center;
+    font-size: 45px;
+  }
+
+  .img-bg {
+    opacity: 0;
+  }
+
+  header nav ul li {
+    color: var(--text-color-primary);
+  }
+
+  div input {
+    width: 100%;
+    height: 30px;
+  }
+
+  div input::placeholder {
+    color: var(--text-color-primary);
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+  .btn-login {
+    width: 140px;
+    height: 45px;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 320px) {
+  svg path {
+    opacity: 0;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #252525; */
+    height: 80px; /* ou o valor que desejar */
+  }
+
+  header nav {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  header li.luna {
+    text-align: center;
+    font-family: "MuseoModerno", sans-serif;
+    color: var(--text-color-primary);
+    font-weight: 100;
+    font-size: 30px;
+  }
+
+  form {
+    width: 250px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    margin-top: 40%;
+  }
+
+  form h1 {
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .img-bg {
+    opacity: 0;
+  }
+
+  header nav ul li {
+    color: var(--text-color-primary);
+  }
+
+  div input {
+    width: 100%;
+    height: 30px;
+  }
+
+  div input::placeholder {
+    color: var(--text-color-primary);
+    font-weight: 300;
+    font-size: 10px;
+  }
+
+  .btn-login {
+    width: 110px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1920px) {
+  .menu-lateral ion-icon {
+    font-size: 50px;
+  }
+
+  .menu-lateral.active ul li:hover {
+    width: 350px;
+  }
+
+  .menu-lateral ul li a {
+    font-size: 26px;
+  }
+
+  .menu-lateral ul li.sair {
+    margin-top: 100px;
+    font-size: 24px;
+  }
+
+  .menu-lateral ul li.sair ion-icon {
+    font-size: 60px;
+  }
+  .content {
+    width: 92vw;
+  }
+
+  .content.active {
+    width: 84vw;
+  }
+
+  /* TELA HOME */
+
+  .nav-pesquisa {
+    width: 90%;
+    padding: 30px 0px 30px 70px;
+  }
+
+  .nav-pesquisa.active {
+    width: 80%;
+  }
+
+  .inputs-pesquisa {
+    width: 400px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .inputs-pesquisa input {
+    width: 100%;
+    height: 40px;
+  }
+
+  .filtro {
+    height: 40px;
+    width: 120px;
+    font-size: 16px;
+  }
+
+  .grupo-itens-escola p {
+    font-size: 18px;
+  }
+
+  .icones {
+    font-size: 30px;
+  }
+
+  .img-escola {
+    height: 50px;
+    width: 50px;
+  }
+
+  .pastas {
+    height: 300px;
+    margin-top: 8%;
+    margin-left: 50px;
+  }
+
+  .pasta {
+    width: 250px;
+    height: 180px;
+  }
+
+  .pasta::before {
+    width: 80px;
+    height: 20px;
+  }
+
+  .pasta ion-icon {
+    font-size: 35px;
+  }
+
+  .pasta p {
+    font-size: 16px;
+  }
+
+  .materias {
+    height: 500px;
+    width: 800px;
+    margin-top: 25%;
+  }
+
+  .materia {
+    width: 220px;
+    height: 160px;
+  }
+
+  .materia p {
+    font-size: 12px;
+  }
+
+  .box-img {
+    margin: 0 60px;
+  }
+
+  .box-img img {
+    width: 240px;
+    height: 180px;
+  }
+
+  .list-materias {
+    width: 600px;
+    height: 360px;
+    margin: 30px 40px;
+  }
+
+  .list-materias label {
+    font-size: 18px;
+  }
+
+  .list-materias ion-icon {
+    font-size: 22px;
+  }
+
+  /* TELA PROFESSORES */
+
+  .lista {
+    width: 630px;
+  }
+
+  /* CADASTRO PROFESSORES */
+
+  .cadastro-professores .grupos-container {
+    gap: 50px;
+  }
+
+  .grupo-esquerdo,
+  .grupo-direita {
+    gap: 15px;
+  }
+
+  .professores p {
+    margin-bottom: 10px;
+  }
+
+  .salvar {
+    margin-top: 20px;
+  }
+
+  /* TELA ALUNOS */
+
+  .lista2 {
+    width: 630px;
+  }
+
+  /* CADASTRO PROFESSORES */
+
+  .cadastro-professores .grupos-container {
+    gap: 50px;
+  }
+
+  .grupo-esquerdo3,
+  .grupo-direita3 {
+    gap: 15px;
+  }
+
+  .alunos p {
+    margin-bottom: 10px;
+  }
+
+  .salvar2 {
+    margin-top: 20px;
+  }
+
+  /* TELA ALUNOS */
+
+  .lista-turma {
+    width: 650px;
+  }
+
+  .profResponsavel {
+    width: 85%;
+  }
+
+  .lista-alunosTurma {
+    width: 85%;
+  }
+
+  .turma {
+    margin-top: 120px;
+  }
+
+  /* Tela Editar Dados */
+  .alterar-dados-escola {
+    margin-top: 8%;
+  }
+
+  .alterar-dados-escola h1 {
+    font-size: 28px;
+  }
+
+  /* Mostrando Dados */
+
+  .img-escola-dados {
+    width: 170px;
+    height: 170px;
+  }
+
+  .apresentacao-dados {
+    margin-top: 30px;
+    width: 250px;
+    height: 520px;
+    gap: 20px;
+  }
+
+  .dados-escola {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 5120px) {
+  /*LOGIN*/
+
+  header nav ul li {
+    font-size: 50px;
+  }
+
+  .logo-svg {
+    width: 70px;
+    height: 51px;
+  }
+
+  
+form {
+  width: 400px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 180%;
+  margin-top: 24vh;
+  flex-direction: column;
+  font-size: 36px;
+  font-weight: 700;
+  gap: 55px;
+  color: var(--text-color-secondary);
+}
+
+form h1 {
+  font-size: 90px;
+}
+
+div input{
+  font-size: 26px;
+}
+
+div input::placeholder{
+  font-size: 25px;
+}
+
+
+div .icone {
+  position: absolute;
+  right: 0;
+}
+
+
+.btn-login {
+  width: 160px;
+  height: 55px;
+  border-radius: 10px;
+  font-size: 28px;
+}
+
+.link {
+  width: 100%;
+  margin-left: 180%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  font-family: "Inter", sans-serif;
+  color: var(--text-color-primary);
+  font-weight: 300;
+  font-size: 30px;
+  gap: 5px;
+}
+
+.link a {
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  color: var(--text-color-secondary);
+}
+
+/* TELA DE CADASTRO */
+
+.principal {
+  display: flex;
+  /* justify-content: flex-start; */
+  /* align-items: flex-start; */
+  flex-direction: column;
+  width: 40vw;
+  height: 80vh;
+  margin-top: 15vh;
+  margin-left: 60%;
+  padding: 0;
+}
+
+.principal h1 {
+  font-weight: 700;
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.form-cadastro {
+  all: unset;
+  display: flex;
+  background-color: transparent;
+  width: 100%;
+  flex-direction: column;
+  /* min-height: 100%; */
+  margin: 20px 0;
+  padding: 0;
+  
+}
+
+.grupos-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.grupo-esquerdo1,
+.grupo-direita1 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 80%;
+  height: 70%;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 400px;
+  color: var(--background-color);
+  gap: 50px;
+}
+
+.box input {
+  margin: 0;
+  padding: 0;
+  border-color: var(--text-color-secondary);
+  color: var(--text-color-primary);
+}
+
+.box input::placeholder {
+  margin: 0;
+  padding: 0;
+  color: var(--text-color-secondary);
+  font-size: 26px;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
+
+.box label {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 90px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--text-color-primary);
+}
+
+.box ion-icon {
+  font-size: 16px;
+  color: var(--text-color-secondary);
+}
+
+.btn-imagem1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+}
+
+.btn-camera1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 62px;
+  cursor: pointer;
+  gap: 10px;
+  background-color: var(--text-color-secondary);
+  color: var(--text-color-tertiary);
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.btn-camera1:hover {
+  background-color: #288c95;
+  color: var(--text-color-tertiary);
+}
+
+.btn-camera1 ion-icon {
+  font-size: 50px;
+  color: inherit;
+}
+
+.box-cadastrar {
+  display: flex;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.btn-cadastrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-color-secondary);
+  width: 270px;
+  height: 80px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  text-decoration: none;
+  color: var(--background-color);
+  cursor: pointer;
+}
+
+  /* NAV-LATERAL */
+
+  .botao-menu {
+    width: 70px;
+    height: 70px;
+    left: 35px;
+    font-size: 80px;
+  }
+
+  .menu-lateral ion-icon {
+    font-size: 70px;
+    flex-shrink: 0;
+  }
+
+  .menu-lateral ul li {
+    padding: 60px 30px;
+    width: 400px;
+  }
+
+  .menu-lateral.active ul li:hover {
+    width: 450px;
+    border-radius: 100px;
+  }
+
+  .menu-lateral ul li a {
+    font-size: 36px;
+    gap: 20px;
+  }
+
+  .menu-lateral ul li.sair {
+    margin-top: 100px;
+    font-size: 32px;
+  }
+
+  .menu-lateral ul li.sair ion-icon {
+    font-size: 90px;
+  }
+  .content {
+    width: 93vw;
+  }
+
+  .content.active {
+    width: 84vw;
+  }
+
+  /* TELA HOME */
+
+  .nav-pesquisa {
+    width: 90%;
+    padding: 30px 0px 30px 70px;
+  }
+
+  .nav-pesquisa.active {
+    width: 80%;
+  }
+
+  .inputs-pesquisa {
+    width: 400px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .inputs-pesquisa input {
+    width: 100%;
+    height: 40px;
+  }
+
+  .filtro {
+    height: 40px;
+    width: 120px;
+    font-size: 16px;
+  }
+
+  .grupo-itens-escola p {
+    font-size: 18px;
+  }
+
+  .icones {
+    font-size: 30px;
+  }
+
+  .img-escola {
+    height: 50px;
+    width: 50px;
+  }
+
+  .pastas {
+    height: 300px;
+    margin-top: 8%;
+    margin-left: 50px;
+  }
+
+  .pasta {
+    width: 250px;
+    height: 180px;
+  }
+
+  .pasta::before {
+    width: 80px;
+    height: 20px;
+  }
+
+  .pasta ion-icon {
+    font-size: 35px;
+  }
+
+  .pasta p {
+    font-size: 16px;
+  }
+
+  .materias {
+    height: 500px;
+    width: 800px;
+    margin-top: 25%;
+  }
+
+  .materia {
+    width: 220px;
+    height: 160px;
+  }
+
+  .materia p {
+    font-size: 12px;
+  }
+
+  .box-img {
+    margin: 0 60px;
+  }
+
+  .box-img img {
+    width: 240px;
+    height: 180px;
+  }
+
+  .list-materias {
+    width: 600px;
+    height: 360px;
+    margin: 30px 40px;
+  }
+
+  .list-materias label {
+    font-size: 18px;
+  }
+
+  .list-materias ion-icon {
+    font-size: 22px;
+  }
+
+  /* TELA PROFESSORES */
+
+  .lista {
+    width: 630px;
+  }
+
+  /* CADASTRO PROFESSORES */
+
+  .cadastro-professores .grupos-container {
+    gap: 50px;
+  }
+
+  .grupo-esquerdo,
+  .grupo-direita {
+    gap: 15px;
+  }
+
+  .professores p {
+    margin-bottom: 10px;
+  }
+
+  .salvar {
+    margin-top: 20px;
+  }
+
+  /* TELA ALUNOS */
+
+  .lista2 {
+    width: 630px;
+  }
+
+  /* CADASTRO PROFESSORES */
+
+  .cadastro-professores .grupos-container {
+    gap: 50px;
+  }
+
+  .grupo-esquerdo3,
+  .grupo-direita3 {
+    gap: 15px;
+  }
+
+  .alunos p {
+    margin-bottom: 10px;
+  }
+
+  .salvar2 {
+    margin-top: 20px;
+  }
+
+  /* TELA ALUNOS */
+
+  .lista-turma {
+    width: 650px;
+  }
+
+  .profResponsavel {
+    width: 85%;
+  }
+
+  .lista-alunosTurma {
+    width: 85%;
+  }
+
+  .turma {
+    margin-top: 120px;
+  }
+
+  /* Tela Editar Dados */
+  .alterar-dados-escola {
+    margin-top: 8%;
+  }
+
+  .alterar-dados-escola h1 {
+    font-size: 28px;
+  }
+
+  /* Mostrando Dados */
+
+  .img-escola-dados {
+    width: 170px;
+    height: 170px;
+  }
+
+  .apresentacao-dados {
+    margin-top: 30px;
+    width: 250px;
+    height: 520px;
+    gap: 20px;
+  }
+
+  .dados-escola {
+    gap: 20px;
+  }
 }

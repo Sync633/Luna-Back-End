@@ -53,6 +53,12 @@
                     Editar Dados
                 </a>
             </li>
+             <li class="sair">
+                <a href="/">
+                    <ion-icon name="log-out"></ion-icon>
+                    Sair
+                </a>
+            </li>
         </ul>
     </nav>
  
@@ -199,7 +205,9 @@
         <!-- EXCLUIR ALUNO -->
 
         <div class="modal-aluno">
-            <ion-icon class="fechar-modal5" name="close-outline"></ion-icon>
+            <a href="/home/cadastro-turmas">
+                <ion-icon class="fechar-modal5" name="close-outline"></ion-icon>
+            </a>
             <div class="modal-header5">
                 <div class="logo-aluno">
                     <ion-icon name="school"></ion-icon>
@@ -216,7 +224,7 @@
                     </a>
 
                     <div>
-                        <a id="botaoCancelar5" onclick="fecharModal5()">
+                        <a id="botaoCancelar5" href="/home/cadastro-turmas">
                             <ion-icon name="thumbs-down"></ion-icon>
                         </a>
                     </div>
@@ -228,10 +236,9 @@
 
         </div>
 
-    </div>  
 
         <!-- EXCLUIR TURMA -->
-            <div class="modal-turma">
+        <div class="modal-turma">
             <ion-icon class="fechar-modal4" name="close-outline"></ion-icon>
             <div class="modal-header4">
                 <div class="logo-turma">
@@ -261,7 +268,6 @@
 
         </div>
  
-    </div>
  
     <script src="/js/script.js"></script>
     <script src="/js/turma.js"></script>

@@ -67,7 +67,7 @@ CREATE TABLE alunos (
     dataNasc DATE NOT NULL,
     ra INT NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
-    escola VARCHAR(100) NOT NULL,
+    nomeResponsavel VARCHAR(100) NOT NULL,
     urlFotoLaudo VARCHAR(255) NOT NULL,
     urlFotoRosto VARCHAR(255) NOT NULL,
     codTurma INT,

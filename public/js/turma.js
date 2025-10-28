@@ -56,15 +56,15 @@ const botaoConfirmar5 = document.getElementById("botaoConfirmar5");
 function ativarModal5(codAluno, codEscola) {
   botaoConfirmar5.href = `/home/cadastro-turmas/delete-aluno/${codAluno}/${codEscola}`;
 
-  modal5.style.animation = "modal5In .5s"
-  mShadown5.style.animation = "shadown5In .5s"
+  modal5.style.animation = "modal3In .5s"
+  mShadown5.style.animation = "shadown3In .5s"
 
   modal5.style.display = "flex";
   mShadown5.style.display = "block";
 }
 
 function fecharModal5() {
-   modal5.style.animation = "modal5Out .5s"
+   modal5.style.animation = "modal3Out .5s"
    mShadown5.style.animation = "shadown5Out .5s"
 
     modal5.addEventListener('animationend', function handler() {
@@ -76,7 +76,7 @@ function fecharModal5() {
 }
 
 btnFechar5.addEventListener("click", () => {
-   modal5.style.animation = "modal5Out .5s"
+   modal5.style.animation = "modal3Out .5s"
    mShadown5.style.animation = "shadown5Out .5s"
 
     modal5.addEventListener('animationend', function handler() {

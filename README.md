@@ -3,7 +3,7 @@
 
 Este repositório contém o código completo do projeto **Luna**, uma aplicação web para administração escolar com foco em soluções digitais para educação.
 
-O sistema é responsável por gerenciar toda a **lógica de negócios**, a **interação com o banco de dados** e a **interface do usuário** (Views e estilos).
+O sistema Não é responsável por gerenciar toda a **lógica de negócios**, a **interação com o banco de dados** e a **interface do usuário** (Views e estilos).
 
 ---
 

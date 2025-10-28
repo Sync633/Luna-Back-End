@@ -3399,7 +3399,7 @@ option {
   }
 
   .menu-lateral ul li.sair {
-    margin-top: 100px;
+    margin-top: 80px;
     font-size: 24px;
   }
 
@@ -3481,7 +3481,7 @@ option {
   .materias {
     height: 500px;
     width: 800px;
-    margin-top: 25%;
+    margin-top: 23%;
   }
 
   .materia {

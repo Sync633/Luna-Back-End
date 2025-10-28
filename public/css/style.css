@@ -380,7 +380,7 @@ div .icone {
 }
 
 .menu-lateral ul li.sair {
-  margin-top: 60px;
+  margin-top: 40px;
   font-size: 20px;
 }
 
@@ -622,7 +622,7 @@ div .icone {
   display: flex;
   height: 380px;
   width: 680px;
-  margin-top: 25%;
+  margin-top: 24%;
   margin-left: 50px;
   border-radius: 15px;
   padding: 0;

@@ -132,7 +132,7 @@ Este projeto foi desenvolvido em colaboração com uma equipe, com a seguinte di
 | **[Ana Flávia](https://github.com/anacardozo)** | Desenvolvimento do **Front-End**, incluindo todas as *Views* (arquivos EJS), os estilos (CSS) e os scripts do lado do cliente (JavaScript, como modais e alertas). |
 | **[Vitor](https://github.com/vgmandira7)** | **Documentação Técnica e Científica:** Elaboração e redação do **Artigo Científico** (incluindo Fundamentação Teórica, Objetivos e Estado da Arte). Criação de **Artefatos e Diagramas**, como o Diagrama do Banco de Dados (DER). |
 | **[Vinícius](https://github.com/zFreitaz)** | Responsável pela criação dos **Artefatos e Diagramas** (modelos conceituais e fluxogramas) e pela manutenção do **Logbook** (registro de atividades e progresso do projeto).|
-
+                  
 ---
 
 ## 📝 Licença
